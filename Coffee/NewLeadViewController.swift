@@ -29,9 +29,10 @@ class NewLeadViewController: UIViewController {
     }
     
     func saveLead() {
-        let lead = PFObject(className: "leadRecord")
+        let lead = PFObject(className: "LeadRecord")
         lead.setObject(leadNameField.text!, forKey: "leadName")
         lead.setObject(leadEmailField.text!, forKey: "leadContactEmail")
+        lead.setObject(PFUser.currentUser()!, forKey: "createdBy")
         lead.saveInBackgroundWithBlock{ succeeded, error in
             if succeeded {
                 self.tabBarController?.popoverPresentationController
@@ -39,28 +40,16 @@ class NewLeadViewController: UIViewController {
                 if let errorMessage = error?.userInfo["error"] as? String {
                     self.showErrorView(error!)
                 }
+                
+                print("new lead created: \(lead)")
     }}}
     
     @IBAction func submitPressed(sender: AnyObject) {
         
         saveLead()
-        
     }
 
 }
-
-
-//
-//    let query = PFQuery(className: "Player") //1
-//    query.whereKey("Name", equalTo: "John") //2
-//    query.whereKey("Score", greaterThan: 1000) //3
-//    query.findObjectsInBackgroundWithBlock { (objects, error) -> Void in //4
-//      if error == nil {
-//        println("Successfully retrieved: \(objects)")
-//      } else {
-//        println("Error: \(error) \(error.userInfo!)")
-//      }
-//    }
 
 
 

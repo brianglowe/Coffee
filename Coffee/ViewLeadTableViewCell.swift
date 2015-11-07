@@ -9,7 +9,7 @@
 import UIKit
 import ParseUI
 
-class ViewLeadTableViewCell: PFTableViewCell {
+class ViewLeadTableViewCell: UITableViewCell {
 
 //    @IBOutlet weak var createdByLabel: UILabel!
     @IBOutlet weak var leadNameLabel: UILabel!
@@ -18,3 +18,5 @@ class ViewLeadTableViewCell: PFTableViewCell {
 
     
 }
+
+// THis is nt doing anything yet

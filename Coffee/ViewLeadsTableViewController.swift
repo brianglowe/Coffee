@@ -10,55 +10,92 @@ import UIKit
 import Parse
 import ParseUI
 
-class ViewLeadsTableViewController: PFQueryTableViewController {
+class ViewLeadsTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+    @IBOutlet var leadRecordsTable: UITableView!
+    
+    var leadRecordsFromQuery = [PFObject]()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+//        loadData()
+//
+//        leadRecordsTable.reloadData()
+
+        print("opened")
     }
     
     override func viewWillAppear(animated: Bool) {
-        loadObjects()
+        loadData()
+        leadRecordsTable.reloadData()
     }
     
-    override func queryForTable() -> PFQuery {
-        let query = LeadRecord.query()
-        return query!
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return leadRecordsFromQuery.count
     }
-
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath, object: PFObject?) -> PFTableViewCell? {
-        let cell = tableView.dequeueReusableCellWithIdentifier("ViewLeadCell", forIndexPath: indexPath) as! ViewLeadTableViewCell
-        let lead = object as! LeadRecord
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let creationDate = lead.createdAt
-        let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "HH:mm dd/mm yyyy"
-        let dateString = dateFormatter.stringFromDate(creationDate!)
-    
-//        cell.textLabel?.text = lead.leadName
-//        cell.detailTextLabel?.text = lead.leadContactInfo
+        let cell:UITableViewCell = tableView.dequeueReusableCellWithIdentifier("ViewLeadCell", forIndexPath: indexPath)
         
-//        
-//        if let username = lead.createdBy.username {
-//            cell.createdByLabel.text = "Uploaded by: \(username), \(dateString)"
-//        } else {
-//            cell.createdByLabel.text = "Uploaded by anonymous: , \(dateString)"
-//        }
-    
-        cell.leadNameLabel.text = lead.leadName
+        let record:PFObject = self.leadRecordsFromQuery.reverse()[indexPath.row] as PFObject
         
-        cell.leadContactInfoLabel.text = lead.leadContactInfo
+        cell.detailTextLabel?.text = record.objectForKey("leadContactEmail") as? String
+        cell.textLabel?.text = record.objectForKey("leadName") as? String
         
         return cell
     }
-
-
+    
+    func loadData() {
+        //****Removes all of the PFObjects from the array so when the table is reloaded that it doesn't add onto the existing objects and the same score won't be listed again.
+        leadRecordsFromQuery.removeAll()
+        
+        let query = PFQuery(className: "LeadRecord")
+        query.whereKey("createdBy", equalTo: PFUser.currentUser()!)
+        query.orderByAscending("createdAt")
+        query.findObjectsInBackgroundWithBlock { (leads: [PFObject]?, error: NSError?) -> Void in
+            if error == nil {
+                
+                for object:PFObject in leads! {
+                    self.leadRecordsFromQuery.append(object)
+                    print(self.leadRecordsFromQuery.count)
+                }
+                
+                //                dispatch_async(dispatch_get_main_queue()) {
+                
+                self.leadRecordsTable.reloadData()
+                
+                //                }
+                
+            } else {
+                print(error)
+            }
+        }
+        
+    }
+    
 }
 
-// the method below replaces the UITableView data source method with a more suitable form. you get the returned PFObject as a parameter, without the need to search it in a results array using an index path.
-//1- Dequeue a cell from the table view, and cast it to a ViewLeadTableViewCell
-//2- cast the given PFObject to a LeadRecord object
-//3- Add the creation date, the user's name and the comment to the cell.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
