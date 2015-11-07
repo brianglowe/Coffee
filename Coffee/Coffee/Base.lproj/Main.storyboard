@@ -48,7 +48,7 @@
                                 <rect key="frame" x="270" y="169" width="62" height="20"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s6k-Fe-HkU">
@@ -96,7 +96,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zj7-us-qbt" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="D6C-4j-OaQ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-380" y="-355"/>
+            <point key="canvasLocation" x="-1052" y="388"/>
         </scene>
         <!--Forgot Password-->
         <scene sceneID="Gl9-JT-PeF">
@@ -114,7 +114,7 @@
                                 <rect key="frame" x="239" y="226" width="122" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UQD-Iy-LCr">
@@ -164,7 +164,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mdL-qb-eGd" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="QOa-Xj-jea" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-1036" y="-355"/>
+            <point key="canvasLocation" x="-1708" y="388"/>
         </scene>
         <!--Login-->
         <scene sceneID="5Aj-Jj-f4g">
@@ -187,14 +187,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WjL-PZ-Usa">
-                                <rect key="frame" x="281" y="330" width="38" height="30"/>
-                                <animations/>
-                                <state key="normal" title="Login"/>
-                                <connections>
-                                    <action selector="loginAction:" destination="G1w-PU-4L9" eventType="touchUpInside" id="hg1-Ib-NRQ"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5XG-Zb-nK3">
                                 <rect key="frame" x="273" y="368" width="55" height="30"/>
                                 <animations/>
@@ -224,6 +216,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WjL-PZ-Usa">
+                                <rect key="frame" x="281" y="330" width="38" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="loginAction:" destination="G1w-PU-4L9" eventType="touchUpInside" id="hg1-Ib-NRQ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.37854646380000001" green="0.80409642270000004" blue="0.1915090461" alpha="1" colorSpace="calibratedRGB"/>
@@ -247,12 +247,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ibz-Fk-KXL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="278" y="-355"/>
+            <point key="canvasLocation" x="-394" y="388"/>
         </scene>
-        <!--Item-->
+        <!--Home-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="Home" id="BYZ-38-t0r" customClass="ViewController" customModule="Coffee" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Home" title="Home" id="BYZ-38-t0r" customClass="ViewController" customModule="Coffee" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -270,36 +270,47 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sVl-Pv-sIU">
-                                <rect key="frame" x="20" y="28" width="200" height="20.5"/>
+                                <rect key="frame" x="20" y="28" width="200" height="21"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="c31-cl-slQ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sap-n0-Spd">
-                                <rect key="frame" x="268" y="285" width="64" height="30"/>
+                                <rect key="frame" x="250" y="279" width="100" height="41"/>
                                 <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="New lead"/>
                                 <connections>
                                     <segue destination="lU3-DI-TNT" kind="presentation" id="IWM-ei-Qk5"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LDJ-3d-HRZ">
+                                <rect key="frame" x="239" y="386" width="123" height="41"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="View Leads">
+                                    <color key="titleColor" red="0.86536287010000001" green="0.34914679279999999" blue="0.1577919408" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="LDJ-3d-HRZ" firstAttribute="top" secondItem="Sap-n0-Spd" secondAttribute="bottom" constant="66" id="1pX-74-gTT"/>
                             <constraint firstItem="Gvj-if-IHe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="29r-7F-asp"/>
                             <constraint firstItem="sVl-Pv-sIU" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="864-lG-rFd"/>
+                            <constraint firstItem="LDJ-3d-HRZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LU1-B8-yC8"/>
                             <constraint firstItem="Sap-n0-Spd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SkF-uG-SwO"/>
                             <constraint firstItem="Sap-n0-Spd" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="XOn-T3-awh"/>
                             <constraint firstItem="sVl-Pv-sIU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="i2D-S3-GVc"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Gvj-if-IHe" secondAttribute="bottom" constant="20" id="wzd-Z5-1Yc"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="xUj-7k-r5Q"/>
+                    <tabBarItem key="tabBarItem" title="Home" id="xUj-7k-r5Q"/>
                     <connections>
                         <outlet property="userNameLabel" destination="sVl-Pv-sIU" id="KxU-y3-Enr"/>
                     </connections>
@@ -307,6 +318,54 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1250" y="388"/>
+        </scene>
+        <!--View Leads-->
+        <scene sceneID="LfT-ef-raB">
+            <objects>
+                <tableViewController storyboardIdentifier="ViewLeadsTableViewController" title="View Leads" id="iwB-6M-bmv" customClass="ViewLeadsTableViewController" customModule="Coffee" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="vPV-vo-syB">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ViewLeadCell" id="b4O-1T-gd1" customClass="PFTableViewCell">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="b4O-1T-gd1" id="ni4-AP-S0N">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lead name label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mkw-Rk-Ywk">
+                                            <rect key="frame" x="17" y="11" width="224" height="21"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Contact Info Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R0J-UU-xIo">
+                                            <rect key="frame" x="362" y="11" width="230" height="21"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <animations/>
+                                </tableViewCellContentView>
+                                <animations/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="iwB-6M-bmv" id="PWS-L6-xSv"/>
+                            <outlet property="delegate" destination="iwB-6M-bmv" id="4B7-xx-E0D"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="View Leads" id="XFx-bo-ndm"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y2b-iV-xXT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1259" y="1170"/>
         </scene>
         <!--New Lead View Controller-->
         <scene sceneID="IIm-Pn-YpD">
@@ -377,12 +436,12 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JDB-P8-Z2t" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="iex-IH-sBp" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1911" y="388"/>
+            <point key="canvasLocation" x="2046" y="388"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="QOl-Z3-TzL">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="amg-7e-nsJ" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="Root" automaticallyAdjustsScrollViewInsets="NO" id="amg-7e-nsJ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="k9i-PH-wiR">
                         <autoresizingMask key="autoresizingMask"/>
@@ -391,6 +450,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="3Mv-IG-9il"/>
+                        <segue destination="iwB-6M-bmv" kind="relationship" relationship="viewControllers" id="xdC-fD-fmd"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2aB-40-9mX" userLabel="First Responder" sceneMemberID="firstResponder"/>

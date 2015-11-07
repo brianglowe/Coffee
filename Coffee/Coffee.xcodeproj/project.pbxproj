@@ -7,9 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D3886B071BED55A200824D3F /* PhotosUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3886B061BED55A200824D3F /* PhotosUI.framework */; };
+		D3886B091BED567800824D3F /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3886B081BED567800824D3F /* ParseUI.framework */; };
 		D39E68421BEC6A5C00F741D9 /* NewLeadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39E68411BEC6A5C00F741D9 /* NewLeadViewController.swift */; };
 		D39E68451BEC6CC200F741D9 /* LeadRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39E68441BEC6CC200F741D9 /* LeadRecord.swift */; };
 		D39E68471BEC8BB800F741D9 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39E68461BEC8BB800F741D9 /* UIViewControllerExtension.swift */; };
+		D39E684C1BED300600F741D9 /* ViewLeadsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39E684B1BED300600F741D9 /* ViewLeadsTableViewController.swift */; };
+		D39E684E1BED460800F741D9 /* ViewLeadTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39E684D1BED460800F741D9 /* ViewLeadTableViewCell.swift */; };
 		D3E027051BEC37D700CD25BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E027041BEC37D700CD25BD /* AppDelegate.swift */; };
 		D3E027071BEC37D700CD25BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E027061BEC37D700CD25BD /* ViewController.swift */; };
 		D3E0270A1BEC37D700CD25BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3E027081BEC37D700CD25BD /* Main.storyboard */; };
@@ -52,12 +56,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D3886B031BED53F800824D3F /* Coffee-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Coffee-Bridging-Header.h"; sourceTree = "<group>"; };
+		D3886B061BED55A200824D3F /* PhotosUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PhotosUI.framework; path = System/Library/Frameworks/PhotosUI.framework; sourceTree = SDKROOT; };
+		D3886B081BED567800824D3F /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
 		D39E68411BEC6A5C00F741D9 /* NewLeadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewLeadViewController.swift; sourceTree = "<group>"; };
 		D39E68441BEC6CC200F741D9 /* LeadRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeadRecord.swift; sourceTree = "<group>"; };
 		D39E68461BEC8BB800F741D9 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		D39E684B1BED300600F741D9 /* ViewLeadsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewLeadsTableViewController.swift; sourceTree = "<group>"; };
+		D39E684D1BED460800F741D9 /* ViewLeadTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewLeadTableViewCell.swift; sourceTree = "<group>"; };
 		D3E027011BEC37D700CD25BD /* Coffee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coffee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3E027041BEC37D700CD25BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D3E027061BEC37D700CD25BD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D3E027061BEC37D700CD25BD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = Coffee/ViewController.swift; sourceTree = "<group>"; };
 		D3E027091BEC37D700CD25BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D3E0270B1BEC37D700CD25BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D3E0270E1BEC37D700CD25BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -90,7 +99,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3886B071BED55A200824D3F /* PhotosUI.framework in Frameworks */,
 				D3E027481BEC455400CD25BD /* AudioToolbox.framework in Frameworks */,
+				D3886B091BED567800824D3F /* ParseUI.framework in Frameworks */,
 				D3E027491BEC455400CD25BD /* CFNetwork.framework in Frameworks */,
 				D3E0274A1BEC455400CD25BD /* CoreGraphics.framework in Frameworks */,
 				D3E0274B1BEC455400CD25BD /* CoreLocation.framework in Frameworks */,
@@ -130,6 +141,16 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		D39E68481BED2EEF00F741D9 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				D3E027331BEC425800CD25BD /* LoginViewController.swift */,
+				D3E027351BEC426700CD25BD /* SignupViewController.swift */,
+				D3E027371BEC427700CD25BD /* ForgotPasswordViewController.swift */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
 		D3E026F81BEC37D700CD25BD = {
 			isa = PBXGroup;
 			children = (
@@ -157,11 +178,11 @@
 				D39E68431BEC6CA700F741D9 /* Model */,
 				D3E027321BEC423800CD25BD /* Controllers */,
 				D3E027041BEC37D700CD25BD /* AppDelegate.swift */,
-				D3E027061BEC37D700CD25BD /* ViewController.swift */,
 				D3E027081BEC37D700CD25BD /* Main.storyboard */,
 				D3E0270B1BEC37D700CD25BD /* Assets.xcassets */,
 				D3E0270D1BEC37D700CD25BD /* LaunchScreen.storyboard */,
 				D3E027101BEC37D700CD25BD /* Info.plist */,
+				D3886B031BED53F800824D3F /* Coffee-Bridging-Header.h */,
 			);
 			path = Coffee;
 			sourceTree = "<group>";
@@ -187,11 +208,12 @@
 		D3E027321BEC423800CD25BD /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D39E684D1BED460800F741D9 /* ViewLeadTableViewCell.swift */,
+				D39E68481BED2EEF00F741D9 /* Login */,
+				D3E027061BEC37D700CD25BD /* ViewController.swift */,
 				D39E68461BEC8BB800F741D9 /* UIViewControllerExtension.swift */,
-				D3E027331BEC425800CD25BD /* LoginViewController.swift */,
-				D3E027351BEC426700CD25BD /* SignupViewController.swift */,
-				D3E027371BEC427700CD25BD /* ForgotPasswordViewController.swift */,
 				D39E68411BEC6A5C00F741D9 /* NewLeadViewController.swift */,
+				D39E684B1BED300600F741D9 /* ViewLeadsTableViewController.swift */,
 			);
 			name = Controllers;
 			path = ..;
@@ -200,6 +222,8 @@
 		D3E027391BEC44A700CD25BD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D3886B081BED567800824D3F /* ParseUI.framework */,
+				D3886B061BED55A200824D3F /* PhotosUI.framework */,
 				D3E0273E1BEC455400CD25BD /* AudioToolbox.framework */,
 				D3E0273F1BEC455400CD25BD /* CFNetwork.framework */,
 				D3E027401BEC455400CD25BD /* CoreGraphics.framework */,
@@ -347,8 +371,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D39E684E1BED460800F741D9 /* ViewLeadTableViewCell.swift in Sources */,
 				D3E027341BEC425800CD25BD /* LoginViewController.swift in Sources */,
 				D3E027381BEC427700CD25BD /* ForgotPasswordViewController.swift in Sources */,
+				D39E684C1BED300600F741D9 /* ViewLeadsTableViewController.swift in Sources */,
 				D3E027071BEC37D700CD25BD /* ViewController.swift in Sources */,
 				D3E027361BEC426700CD25BD /* SignupViewController.swift in Sources */,
 				D39E68471BEC8BB800F741D9 /* UIViewControllerExtension.swift in Sources */,
@@ -496,6 +522,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -504,6 +531,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = BG.Coffee;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Coffee/Coffee-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -511,6 +540,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -519,6 +549,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = BG.Coffee;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Coffee/Coffee-Bridging-Header.h";
 			};
 			name = Release;
 		};

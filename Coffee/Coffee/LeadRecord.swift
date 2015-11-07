@@ -36,6 +36,10 @@ class LeadRecord: PFObject {
     }
 }
 
+
+
+
+
 extension LeadRecord: PFSubclassing {
  // this sets the name of the object on the backend in Parse
     class func parseClassName() -> String {
@@ -49,3 +53,16 @@ extension LeadRecord: PFSubclassing {
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

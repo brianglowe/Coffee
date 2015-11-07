@@ -29,15 +29,9 @@ class NewLeadViewController: UIViewController {
     }
     
     func saveLead() {
-        
         let lead = PFObject(className: "leadRecord")
         lead.setObject(leadNameField.text!, forKey: "leadName")
         lead.setObject(leadEmailField.text!, forKey: "leadContactEmail")
-        
-//        
-//        let lead = LeadRecord(leadName: self.leadNameField.text, contactInfo: self.leadEmailField.text, createdBy: (PFUser.currentUser()!))
-        print(lead)
-        
         lead.saveInBackgroundWithBlock{ succeeded, error in
             if succeeded {
                 self.tabBarController?.popoverPresentationController
@@ -45,9 +39,7 @@ class NewLeadViewController: UIViewController {
                 if let errorMessage = error?.userInfo["error"] as? String {
                     self.showErrorView(error!)
                 }
-            }
-        }
-    }
+    }}}
     
     @IBAction func submitPressed(sender: AnyObject) {
         
@@ -56,22 +48,8 @@ class NewLeadViewController: UIViewController {
     }
 
 }
-//
-//    let player = PFObject(className: "Player")//1
-//    player.setObject("John", forKey: "Name")
-//    player.setObject(1230, forKey: "Score")//2
-//    player.save()//3
-//
-//    let player = PFObject(className: "Player")
-//    player.setObject("Jack", forKey: "Name")
-//    player.setObject(840, forKey: "Score")
-//    player.saveInBackgroundWithBlock { (succeeded, error) -> Void in
-//      if succeeded {
-//        println("Object Uploaded")
-//      } else {
-//        println("Error: \(error) \(error.userInfo!)")
-//      }
-//    }
+
+
 //
 //    let query = PFQuery(className: "Player") //1
 //    query.whereKey("Name", equalTo: "John") //2
