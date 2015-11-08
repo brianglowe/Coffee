@@ -10,7 +10,7 @@ import UIKit
 import Parse
 import ParseUI
 
-class ViewLeadsTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ViewLeadsTableViewController: UITableViewController {
 
     @IBOutlet var leadRecordsTable: UITableView!
     
@@ -20,25 +20,33 @@ class ViewLeadsTableViewController: UIViewController, UITableViewDataSource, UIT
     override func viewDidLoad() {
         super.viewDidLoad()
 //        loadData()
-//
-//        leadRecordsTable.reloadData()
+
 
         print("opened")
     }
     
     override func viewWillAppear(animated: Bool) {
         loadData()
-        leadRecordsTable.reloadData()
+     //   leadRecordsTable.reloadData()
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "ShowLeadDetailSegue" {
+            if let indexPath = self.leadRecordsTable.indexPathForSelectedRow {
+                let lead = leadRecordsFromQuery[indexPath.row]
+                let destinationController: LeadDetailViewController = segue.destinationViewController as! LeadDetailViewController
+                destinationController.detailedLead = lead
+            }
+        }
+    }
+    
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return leadRecordsFromQuery.count
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell:UITableViewCell = tableView.dequeueReusableCellWithIdentifier("ViewLeadCell", forIndexPath: indexPath)
-        
         let record:PFObject = self.leadRecordsFromQuery.reverse()[indexPath.row] as PFObject
         
         cell.detailTextLabel?.text = record.objectForKey("leadContactEmail") as? String
@@ -46,9 +54,13 @@ class ViewLeadsTableViewController: UIViewController, UITableViewDataSource, UIT
         
         return cell
     }
+//    
+//    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+//        
+//    }
+    
     
     func loadData() {
-        //****Removes all of the PFObjects from the array so when the table is reloaded that it doesn't add onto the existing objects and the same score won't be listed again.
         leadRecordsFromQuery.removeAll()
         
         let query = PFQuery(className: "LeadRecord")
@@ -56,24 +68,19 @@ class ViewLeadsTableViewController: UIViewController, UITableViewDataSource, UIT
         query.orderByAscending("createdAt")
         query.findObjectsInBackgroundWithBlock { (leads: [PFObject]?, error: NSError?) -> Void in
             if error == nil {
-                
                 for object:PFObject in leads! {
                     self.leadRecordsFromQuery.append(object)
                     print(self.leadRecordsFromQuery.count)
                 }
-                
-                //                dispatch_async(dispatch_get_main_queue()) {
-                
                 self.leadRecordsTable.reloadData()
-                
-                //                }
-                
             } else {
                 print(error)
             }
-        }
-        
-    }
+    }}
+    
+    
+    
+    
     
 }
 

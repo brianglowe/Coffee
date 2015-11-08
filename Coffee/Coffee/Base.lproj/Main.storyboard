@@ -270,7 +270,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sVl-Pv-sIU">
-                                <rect key="frame" x="20" y="28" width="200" height="20.5"/>
+                                <rect key="frame" x="20" y="28" width="200" height="21"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="c31-cl-slQ"/>
@@ -317,35 +317,35 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1250" y="388"/>
+            <point key="canvasLocation" x="1672" y="318"/>
         </scene>
         <!--View Leads-->
-        <scene sceneID="LfT-ef-raB">
+        <scene sceneID="btu-v0-Ynq">
             <objects>
-                <tableViewController storyboardIdentifier="ViewLeadsTableViewController" title="View Leads" id="iwB-6M-bmv" customClass="ViewLeadsTableViewController" customModule="Coffee" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="vPV-vo-syB">
+                <tableViewController storyboardIdentifier="ViewLeadsTableViewController" title="View Leads" id="XaI-9Y-U3F" customClass="ViewLeadsTableViewController" customModule="Coffee" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="V1u-Cb-EQU">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ViewLeadCell" textLabel="kSS-OL-tDy" detailTextLabel="8HZ-3D-uL6" style="IBUITableViewCellStyleValue1" id="b4O-1T-gd1">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ViewLeadCell" textLabel="Yk2-X8-Lo2" detailTextLabel="Crd-FD-RbR" style="IBUITableViewCellStyleValue1" id="874-oD-Cjo">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="b4O-1T-gd1" id="ni4-AP-S0N">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="874-oD-Cjo" id="LSL-Vr-3gb">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kSS-OL-tDy">
-                                            <rect key="frame" x="15" y="11" width="37" height="23"/>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Yk2-X8-Lo2">
+                                            <rect key="frame" x="15" y="12" width="31.5" height="19.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <animations/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                            <color key="textColor" red="0.3208007812" green="0.31789679279999999" blue="0.95219983549999998" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8HZ-3D-uL6">
-                                            <rect key="frame" x="543.5" y="14" width="41.5" height="19.5"/>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Crd-FD-RbR">
+                                            <rect key="frame" x="543.5" y="12" width="41.5" height="19.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -356,21 +356,98 @@
                                     <animations/>
                                 </tableViewCellContentView>
                                 <animations/>
+                                <connections>
+                                    <segue destination="xb3-kE-tRW" kind="show" id="fsC-Pv-rsM"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="iwB-6M-bmv" id="Y8f-WZ-hJh"/>
-                            <outlet property="delegate" destination="iwB-6M-bmv" id="4B7-xx-E0D"/>
+                            <outlet property="dataSource" destination="XaI-9Y-U3F" id="3ea-T4-CUs"/>
+                            <outlet property="delegate" destination="XaI-9Y-U3F" id="fVY-zr-cb1"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="View Leads" id="XFx-bo-ndm"/>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="YaF-nQ-Djo"/>
                     <connections>
-                        <outlet property="leadRecordsTable" destination="vPV-vo-syB" id="uMP-GY-oy0"/>
+                        <outlet property="leadRecordsTable" destination="V1u-Cb-EQU" id="sdS-f7-Gr5"/>
                     </connections>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Y2b-iV-xXT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fe8-zc-mfD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1259" y="1170"/>
+            <point key="canvasLocation" x="1058" y="2015"/>
+        </scene>
+        <!--View Leads List-->
+        <scene sceneID="avZ-vd-H67">
+            <objects>
+                <navigationController id="Fce-Ve-rp2" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="View Leads List" id="BZH-ME-sDf"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gEW-rz-1MP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="XaI-9Y-U3F" kind="relationship" relationship="rootViewController" id="ozn-Gd-wrQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ciM-WV-iGG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="274" y="2015"/>
+        </scene>
+        <!--Lead Detail-->
+        <scene sceneID="h9K-Yt-QNf">
+            <objects>
+                <viewController storyboardIdentifier="LeadDetailViewController" title="Lead Detail" id="xb3-kE-tRW" customClass="LeadDetailViewController" customModule="Coffee" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sBW-Xr-Z8r"/>
+                        <viewControllerLayoutGuide type="bottom" id="BzN-QI-wSv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tX8-u4-gT3">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lead Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ezM-CQ-Ygp">
+                                <rect key="frame" x="20" y="94" width="560" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lead Contact Eamil" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aVj-QV-utW">
+                                <rect key="frame" x="20" y="173" width="560" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zvg-4V-ljj">
+                                <rect key="frame" x="20" y="513" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aVj-QV-utW" firstAttribute="top" secondItem="ezM-CQ-Ygp" secondAttribute="bottom" constant="58" id="034-iW-7h8"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Zvg-4V-ljj" secondAttribute="leading" id="3Hk-BO-wnP"/>
+                            <constraint firstItem="ezM-CQ-Ygp" firstAttribute="centerX" secondItem="tX8-u4-gT3" secondAttribute="centerX" id="CtG-u2-Kkt"/>
+                            <constraint firstItem="ezM-CQ-Ygp" firstAttribute="trailing" secondItem="tX8-u4-gT3" secondAttribute="trailingMargin" id="DVo-Kx-bfD"/>
+                            <constraint firstItem="ezM-CQ-Ygp" firstAttribute="top" secondItem="sBW-Xr-Z8r" secondAttribute="bottom" constant="30" id="OFm-Bg-2dk"/>
+                            <constraint firstItem="aVj-QV-utW" firstAttribute="centerX" secondItem="tX8-u4-gT3" secondAttribute="centerX" id="REl-fm-Ehq"/>
+                            <constraint firstItem="ezM-CQ-Ygp" firstAttribute="leading" secondItem="tX8-u4-gT3" secondAttribute="leadingMargin" id="aly-a2-HAL"/>
+                            <constraint firstItem="aVj-QV-utW" firstAttribute="trailing" secondItem="tX8-u4-gT3" secondAttribute="trailingMargin" id="cA8-b1-bjw"/>
+                            <constraint firstItem="aVj-QV-utW" firstAttribute="leading" secondItem="tX8-u4-gT3" secondAttribute="leadingMargin" id="ofw-cv-rdp"/>
+                            <constraint firstItem="BzN-QI-wSv" firstAttribute="top" secondItem="Zvg-4V-ljj" secondAttribute="bottom" constant="8" id="w7d-QI-P2U"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="leadContactEmailLabel" destination="aVj-QV-utW" id="TCc-0k-yos"/>
+                        <outlet property="leadNameLabel" destination="ezM-CQ-Ygp" id="hBT-tp-exQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZNb-4r-dCN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1794" y="2022"/>
         </scene>
         <!--New Lead View Controller-->
         <scene sceneID="IIm-Pn-YpD">
@@ -441,7 +518,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JDB-P8-Z2t" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="iex-IH-sBp" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2046" y="388"/>
+            <point key="canvasLocation" x="2474" y="306"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="QOl-Z3-TzL">
@@ -455,7 +532,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="3Mv-IG-9il"/>
-                        <segue destination="iwB-6M-bmv" kind="relationship" relationship="viewControllers" id="xdC-fD-fmd"/>
+                        <segue destination="Fce-Ve-rp2" kind="relationship" relationship="viewControllers" id="WMD-Nr-0xt"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2aB-40-9mX" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		D3886B071BED55A200824D3F /* PhotosUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3886B061BED55A200824D3F /* PhotosUI.framework */; };
 		D3886B091BED567800824D3F /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3886B081BED567800824D3F /* ParseUI.framework */; };
+		D39262C31BEEF5A20074856E /* LeadDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39262C21BEEF5A20074856E /* LeadDetailViewController.swift */; };
 		D39E68421BEC6A5C00F741D9 /* NewLeadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39E68411BEC6A5C00F741D9 /* NewLeadViewController.swift */; };
 		D39E68451BEC6CC200F741D9 /* LeadRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39E68441BEC6CC200F741D9 /* LeadRecord.swift */; };
 		D39E68471BEC8BB800F741D9 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39E68461BEC8BB800F741D9 /* UIViewControllerExtension.swift */; };
@@ -59,6 +60,7 @@
 		D3886B031BED53F800824D3F /* Coffee-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Coffee-Bridging-Header.h"; sourceTree = "<group>"; };
 		D3886B061BED55A200824D3F /* PhotosUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PhotosUI.framework; path = System/Library/Frameworks/PhotosUI.framework; sourceTree = SDKROOT; };
 		D3886B081BED567800824D3F /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
+		D39262C21BEEF5A20074856E /* LeadDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeadDetailViewController.swift; sourceTree = "<group>"; };
 		D39E68411BEC6A5C00F741D9 /* NewLeadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewLeadViewController.swift; sourceTree = "<group>"; };
 		D39E68441BEC6CC200F741D9 /* LeadRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeadRecord.swift; sourceTree = "<group>"; };
 		D39E68461BEC8BB800F741D9 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
@@ -214,6 +216,7 @@
 				D39E68461BEC8BB800F741D9 /* UIViewControllerExtension.swift */,
 				D39E68411BEC6A5C00F741D9 /* NewLeadViewController.swift */,
 				D39E684B1BED300600F741D9 /* ViewLeadsTableViewController.swift */,
+				D39262C21BEEF5A20074856E /* LeadDetailViewController.swift */,
 			);
 			name = Controllers;
 			path = ..;
@@ -371,6 +374,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D39262C31BEEF5A20074856E /* LeadDetailViewController.swift in Sources */,
 				D39E684E1BED460800F741D9 /* ViewLeadTableViewCell.swift in Sources */,
 				D3E027341BEC425800CD25BD /* LoginViewController.swift in Sources */,
 				D3E027381BEC427700CD25BD /* ForgotPasswordViewController.swift in Sources */,
