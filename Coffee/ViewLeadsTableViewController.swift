@@ -48,7 +48,7 @@ class ViewLeadsTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell:UITableViewCell = tableView.dequeueReusableCellWithIdentifier("ViewLeadCell", forIndexPath: indexPath)
-        let record:PFObject = self.leadRecordsFromQuery.reverse()[indexPath.row] as PFObject
+        let record:PFObject = self.leadRecordsFromQuery [indexPath.row] as PFObject
         
         cell.detailTextLabel?.text = record.objectForKey("leadContactEmail") as? String
         cell.textLabel?.text = record.objectForKey("leadName") as? String

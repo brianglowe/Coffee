@@ -14,6 +14,8 @@ class LeadDetailViewController: UIViewController {
     @IBOutlet weak var leadNameLabel: UILabel!
     @IBOutlet weak var leadContactEmailLabel: UILabel!
     
+//    var detailedLead: PFObject?
+    
     var detailedLead: PFObject? {
         didSet {
             // Update the view.
