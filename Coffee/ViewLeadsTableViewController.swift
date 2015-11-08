@@ -36,6 +36,7 @@ class ViewLeadsTableViewController: UITableViewController {
                 let lead = leadRecordsFromQuery[indexPath.row]
                 let destinationController: LeadDetailViewController = segue.destinationViewController as! LeadDetailViewController
                 destinationController.detailedLead = lead
+         print("the lead coming from the ViewLeadTBVC: \(lead)")
             }
         }
     }

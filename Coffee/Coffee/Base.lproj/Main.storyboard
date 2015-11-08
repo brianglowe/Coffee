@@ -357,7 +357,7 @@
                                 </tableViewCellContentView>
                                 <animations/>
                                 <connections>
-                                    <segue destination="xb3-kE-tRW" kind="show" id="fsC-Pv-rsM"/>
+                                    <segue destination="xb3-kE-tRW" kind="show" identifier="ShowLeadDetailSegue" id="fsC-Pv-rsM"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
