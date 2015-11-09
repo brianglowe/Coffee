@@ -13,6 +13,10 @@ class LeadDetailViewController: UIViewController {
 
     @IBOutlet weak var leadNameLabel: UILabel!
     @IBOutlet weak var leadContactEmailLabel: UILabel!
+    @IBOutlet weak var leadCompanyLabel: UILabel!
+    @IBOutlet weak var leadPhoneLabel: UILabel!
+    @IBOutlet weak var leadRatingLabel: UILabel!
+    @IBOutlet weak var leadCommentsLabel: UILabel!
     
 //    var detailedLead: PFObject?
     

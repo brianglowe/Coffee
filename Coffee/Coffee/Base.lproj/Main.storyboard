@@ -489,8 +489,12 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="leadCommentsLabel" destination="y5M-ww-wm2" id="Gfi-Pw-alq"/>
+                        <outlet property="leadCompanyLabel" destination="Na7-4K-uwR" id="HJ3-cg-ABA"/>
                         <outlet property="leadContactEmailLabel" destination="aVj-QV-utW" id="TCc-0k-yos"/>
                         <outlet property="leadNameLabel" destination="ezM-CQ-Ygp" id="hBT-tp-exQ"/>
+                        <outlet property="leadPhoneLabel" destination="U9g-5Q-q0I" id="aHj-n2-qjH"/>
+                        <outlet property="leadRatingLabel" destination="Nni-PW-ZqA" id="fR9-mO-PTl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZNb-4r-dCN" userLabel="First Responder" sceneMemberID="firstResponder"/>
