@@ -20,13 +20,6 @@ class LeadDetailViewController: UIViewController {
     
     var detailedLead = PFObject?()
     
-//    var detailedLead: PFObject? {
-//        didSet {
-//            // Update the view.
-//            self.showLeadDetails()
-//        }
-//    }
-    
     func showLeadDetails() {
         leadNameLabel.text = detailedLead?.objectForKey("leadName") as? String
         leadContactEmailLabel.text = detailedLead?.objectForKey("leadContactEmail") as? String
@@ -38,8 +31,9 @@ class LeadDetailViewController: UIViewController {
     
     override func viewDidLoad() {
        super.viewDidLoad()
-        
-        self.showLeadDetails()
+
+        showLeadDetails()
+//        self.showLeadDetails()
         // Do any additional setup after loading the view.
     }
 

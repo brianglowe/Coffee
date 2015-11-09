@@ -19,10 +19,13 @@ class EditLeadViewController: UIViewController {
     
     var leadToEdit = PFObject?()
     
+    // do i need to save the ObjectID?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         showLeadDetails()
+        
         // Do any additional setup after loading the view.
     }
 
@@ -39,17 +42,42 @@ class EditLeadViewController: UIViewController {
         leadRatingField.text = leadToEdit?.objectForKey("leadRating") as? String
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func updateLeadDetails() {
+        let leadToUpdate = leadToEdit
+        leadToUpdate?.setObject(leadPhoneField.text!, forKey: "leadPhone")
+        leadToUpdate?.setObject(leadEmailField.text!, forKey: "leadContactEmail")
+        leadToUpdate?.setObject(leadRatingField.text!, forKey: "leadRating")
+        leadToUpdate!.saveInBackgroundWithBlock{ succeeded, error in
+            if succeeded {
+                self.tabBarController?.popoverPresentationController
+            } else {
+                if let errorMessage = error?.userInfo["error"] as? String {
+                    self.showErrorView(error!)
+                }
+                
+                print("lead updated: \(leadToUpdate)")
+            }}
     }
-    */
+    
     @IBAction func submitEditButton(sender: AnyObject) {
-        
+        updateLeadDetails()
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
