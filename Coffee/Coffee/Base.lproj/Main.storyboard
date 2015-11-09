@@ -457,7 +457,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Edit"/>
                                 <connections>
-                                    <segue destination="MWU-HM-91b" kind="show" id="cY9-E3-24a"/>
+                                    <action selector="editLeadButton:" destination="xb3-kE-tRW" eventType="touchUpInside" id="Xf8-63-jdr"/>
+                                    <segue destination="MWU-HM-91b" kind="show" identifier="EditLeadSegue" id="cY9-E3-24a"/>
                                 </connections>
                             </button>
                         </subviews>

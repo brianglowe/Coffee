@@ -48,10 +48,43 @@ class LeadDetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "EditLeadSegue" {
+            if let leadToEdit = self.detailedLead {
+                let destinationController: EditLeadViewController = segue.destinationViewController as! EditLeadViewController
+                destinationController.leadToEdit = leadToEdit
+                print("the lead coming from LeadDetailVC: \(leadToEdit)")
+            }
+        }
+    }
+    
+    @IBAction func editLeadButton(sender: AnyObject) {
+    }
     
     // 1- Add ability to edit the current lead record
     // add button to add action / activity to the record.
     
     
 }
- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
