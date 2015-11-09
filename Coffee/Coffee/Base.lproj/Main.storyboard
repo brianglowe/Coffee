@@ -341,7 +341,7 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Crd-FD-RbR">
@@ -409,14 +409,9 @@
                                 <rect key="frame" x="20" y="84" width="560" height="20.5"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zvg-4V-ljj">
-                                <rect key="frame" x="20" y="513" width="46" height="30"/>
-                                <animations/>
-                                <state key="normal" title="Button"/>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lead Company" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Na7-4K-uwR">
                                 <rect key="frame" x="20" y="145" width="560" height="20.5"/>
                                 <animations/>
@@ -456,6 +451,15 @@
                                 <color key="textColor" red="0.3208007812" green="0.31789679279999999" blue="0.95219983549999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zvg-4V-ljj">
+                                <rect key="frame" x="20" y="502" width="41" height="41"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Edit"/>
+                                <connections>
+                                    <segue destination="MWU-HM-91b" kind="show" id="cY9-E3-24a"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -500,6 +504,101 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZNb-4r-dCN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1954" y="1121"/>
+        </scene>
+        <!--Edit Lead-->
+        <scene sceneID="QUB-R7-GTu">
+            <objects>
+                <viewController storyboardIdentifier="EditLeadViewController" title="Edit Lead" id="MWU-HM-91b" customClass="EditLeadViewController" customModule="Coffee" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ozb-OH-Zvz"/>
+                        <viewControllerLayoutGuide type="bottom" id="iaf-AW-Z3N"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8G1-04-AHV">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lead Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="btj-J3-4ek">
+                                <rect key="frame" x="20" y="85" width="560" height="20.5"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lead Company" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i7v-se-6T7">
+                                <rect key="frame" x="20" y="113.5" width="560" height="20.5"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Lead Phone" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sUL-23-IaQ">
+                                <rect key="frame" x="20" y="142" width="560" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Lead Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fWW-Mr-AWN">
+                                <rect key="frame" x="20" y="180" width="560" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Lead Rating" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aJp-uM-1Fz">
+                                <rect key="frame" x="20" y="218" width="560" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N92-mT-iFP">
+                                <rect key="frame" x="20" y="495" width="95" height="48"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Submit">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="submitEditButton:" destination="MWU-HM-91b" eventType="touchUpInside" id="QWk-0Y-vMd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="0.37854646380000001" green="0.5" blue="0.95027240950000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="i7v-se-6T7" firstAttribute="leading" secondItem="8G1-04-AHV" secondAttribute="leadingMargin" id="4Y1-rb-4la"/>
+                            <constraint firstItem="fWW-Mr-AWN" firstAttribute="centerX" secondItem="8G1-04-AHV" secondAttribute="centerX" id="5ZY-Pr-vyT"/>
+                            <constraint firstItem="aJp-uM-1Fz" firstAttribute="leading" secondItem="8G1-04-AHV" secondAttribute="leadingMargin" id="8mF-IR-f3E"/>
+                            <constraint firstItem="btj-J3-4ek" firstAttribute="trailing" secondItem="8G1-04-AHV" secondAttribute="trailingMargin" id="B3v-Vr-4oB"/>
+                            <constraint firstItem="aJp-uM-1Fz" firstAttribute="trailing" secondItem="8G1-04-AHV" secondAttribute="trailingMargin" id="BSG-yj-OyM"/>
+                            <constraint firstItem="sUL-23-IaQ" firstAttribute="trailing" secondItem="8G1-04-AHV" secondAttribute="trailingMargin" id="IRR-Pk-yUb"/>
+                            <constraint firstItem="aJp-uM-1Fz" firstAttribute="centerX" secondItem="8G1-04-AHV" secondAttribute="centerX" id="NKa-gU-I4N"/>
+                            <constraint firstItem="sUL-23-IaQ" firstAttribute="centerX" secondItem="8G1-04-AHV" secondAttribute="centerX" id="OjR-o6-93q"/>
+                            <constraint firstItem="btj-J3-4ek" firstAttribute="centerX" secondItem="8G1-04-AHV" secondAttribute="centerX" id="TWF-6J-lDs"/>
+                            <constraint firstItem="i7v-se-6T7" firstAttribute="centerX" secondItem="8G1-04-AHV" secondAttribute="centerX" id="a6g-Op-BQf"/>
+                            <constraint firstItem="i7v-se-6T7" firstAttribute="top" secondItem="btj-J3-4ek" secondAttribute="bottom" constant="8" id="cv9-UR-pFO"/>
+                            <constraint firstItem="btj-J3-4ek" firstAttribute="leading" secondItem="8G1-04-AHV" secondAttribute="leadingMargin" id="kXX-nc-weo"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="N92-mT-iFP" secondAttribute="leading" id="nVS-XE-DdL"/>
+                            <constraint firstItem="iaf-AW-Z3N" firstAttribute="top" secondItem="N92-mT-iFP" secondAttribute="bottom" constant="8" id="oa1-Pv-e3s"/>
+                            <constraint firstItem="i7v-se-6T7" firstAttribute="trailing" secondItem="8G1-04-AHV" secondAttribute="trailingMargin" id="ocr-6e-xXM"/>
+                            <constraint firstItem="sUL-23-IaQ" firstAttribute="top" secondItem="i7v-se-6T7" secondAttribute="bottom" constant="8" id="opL-H8-u80"/>
+                            <constraint firstItem="btj-J3-4ek" firstAttribute="top" secondItem="ozb-OH-Zvz" secondAttribute="bottom" constant="21" id="rxl-mh-5NJ"/>
+                            <constraint firstItem="aJp-uM-1Fz" firstAttribute="top" secondItem="fWW-Mr-AWN" secondAttribute="bottom" constant="8" id="ujc-Jm-XFg"/>
+                            <constraint firstItem="fWW-Mr-AWN" firstAttribute="trailing" secondItem="8G1-04-AHV" secondAttribute="trailingMargin" id="v2c-7f-j4e"/>
+                            <constraint firstItem="fWW-Mr-AWN" firstAttribute="leading" secondItem="8G1-04-AHV" secondAttribute="leadingMargin" id="vW2-Q3-VSj"/>
+                            <constraint firstItem="sUL-23-IaQ" firstAttribute="leading" secondItem="8G1-04-AHV" secondAttribute="leadingMargin" id="wlR-TG-aU1"/>
+                            <constraint firstItem="fWW-Mr-AWN" firstAttribute="top" secondItem="sUL-23-IaQ" secondAttribute="bottom" constant="8" id="ze4-Bx-c5j"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="leadCompanyLabel" destination="i7v-se-6T7" id="BVv-g0-9Uv"/>
+                        <outlet property="leadEmailField" destination="fWW-Mr-AWN" id="oTf-Rs-f82"/>
+                        <outlet property="leadNameLabel" destination="btj-J3-4ek" id="Ega-0A-OKO"/>
+                        <outlet property="leadPhoneField" destination="sUL-23-IaQ" id="DLC-4d-ThF"/>
+                        <outlet property="leadRatingField" destination="aJp-uM-1Fz" id="7S1-fi-yRS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="geZ-IM-qPX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1954" y="1905"/>
         </scene>
         <!--New Lead View Controller-->
         <scene sceneID="IIm-Pn-YpD">
