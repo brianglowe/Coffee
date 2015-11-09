@@ -18,37 +18,28 @@ class LeadDetailViewController: UIViewController {
     @IBOutlet weak var leadRatingLabel: UILabel!
     @IBOutlet weak var leadCommentsLabel: UILabel!
     
-//    var detailedLead: PFObject?
+    var detailedLead = PFObject?()
     
-    var detailedLead: PFObject? {
-        didSet {
-            // Update the view.
-            self.configureView()
-        }
-    }
-
-    var leadName: String?
-    var leadContactEmail: String?
+//    var detailedLead: PFObject? {
+//        didSet {
+//            // Update the view.
+//            self.showLeadDetails()
+//        }
+//    }
     
-    func configureView() {
-        if let lead = self.detailedLead {
-            if let label = self.leadNameLabel {
-                label.text = lead.objectForKey("leadName") as? String
-            }
-        }
+    func showLeadDetails() {
+        leadNameLabel.text = detailedLead?.objectForKey("leadName") as? String
+        leadContactEmailLabel.text = detailedLead?.objectForKey("leadEmail") as? String
+        leadCompanyLabel.text = detailedLead?.objectForKey("leadCompany") as? String
+        leadPhoneLabel.text = detailedLead?.objectForKey("leadPhone") as? String
+        leadRatingLabel.text = detailedLead?.objectForKey("leadRating") as? String
+        leadCommentsLabel.text = detailedLead?.objectForKey("leadComments") as? String
     }
     
     override func viewDidLoad() {
        super.viewDidLoad()
-       
-//        if detailedLead == nil {
-//            print("nothing there")
-//        } else {
-//            print("the detailedLead has something there")
-//        }
         
-        
-        self.configureView()
+        self.showLeadDetails()
         // Do any additional setup after loading the view.
     }
 
