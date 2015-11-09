@@ -21,6 +21,8 @@ class EditLeadViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        showLeadDetails()
         // Do any additional setup after loading the view.
     }
 
@@ -29,6 +31,13 @@ class EditLeadViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func showLeadDetails() {
+        leadNameLabel.text = leadToEdit?.objectForKey("leadName") as? String
+        leadCompanyLabel.text = leadToEdit?.objectForKey("leadCompany") as? String
+        leadPhoneField.text = leadToEdit?.objectForKey("leadPhone") as? String
+        leadEmailField.text = leadToEdit?.objectForKey("leadContactEmail") as? String
+        leadRatingField.text = leadToEdit?.objectForKey("leadRating") as? String
+    }
 
     /*
     // MARK: - Navigation

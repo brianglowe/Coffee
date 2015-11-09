@@ -29,7 +29,7 @@ class LeadDetailViewController: UIViewController {
     
     func showLeadDetails() {
         leadNameLabel.text = detailedLead?.objectForKey("leadName") as? String
-        leadContactEmailLabel.text = detailedLead?.objectForKey("leadEmail") as? String
+        leadContactEmailLabel.text = detailedLead?.objectForKey("leadContactEmail") as? String
         leadCompanyLabel.text = detailedLead?.objectForKey("leadCompany") as? String
         leadPhoneLabel.text = detailedLead?.objectForKey("leadPhone") as? String
         leadRatingLabel.text = detailedLead?.objectForKey("leadRating") as? String
