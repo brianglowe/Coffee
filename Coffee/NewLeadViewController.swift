@@ -50,8 +50,20 @@ class NewLeadViewController: UIViewController {
                 print("new lead created: \(lead)")
     }}}
     
+    func clearFields() {
+        leadNameField.text?.removeAll()
+        leadEmailField.text?.removeAll()
+        leadCompanyField.text?.removeAll()
+        leadNumberField.text?.removeAll()
+        leadRatingField.text?.removeAll()
+        leadCommentsField.text?.removeAll()
+    }
+    
+    
+    
     @IBAction func submitPressed(sender: AnyObject) {
         saveLead()
+        clearFields()
     }
 
 }
