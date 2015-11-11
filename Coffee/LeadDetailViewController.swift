@@ -22,28 +22,53 @@ class LeadDetailViewController: UIViewController {
     
     var leadToRefresh = PFObject?()
     
-    func showLeadDetails() {
-        leadNameLabel.text = detailedLead?.objectForKey("leadName") as? String
-        leadContactEmailLabel.text = detailedLead?.objectForKey("leadContactEmail") as? String
-        leadCompanyLabel.text = detailedLead?.objectForKey("leadCompany") as? String
-        leadPhoneLabel.text = detailedLead?.objectForKey("leadPhone") as? String
-        leadRatingLabel.text = detailedLead?.objectForKey("leadRating") as? String
-        leadCommentsLabel.text = detailedLead?.objectForKey("leadComments") as? String
-    }
-    
     override func viewDidLoad() {
        super.viewDidLoad()
 
-        print("this is the detailed lead: \(detailedLead)")
-        
-        showLeadDetails()
-//        self.showLeadDetails()
+        loadLead()
+    print("this is the detailed lead: \(detailedLead)")
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        loadLead()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
+    func loadLead() {
+        let query = PFQuery(className: "LeadRecord")
+        query.whereKey("objectId", equalTo: (detailedLead?.objectId)!)
+        query.findObjectsInBackgroundWithBlock { (lead: [PFObject]?, error: NSError?) -> Void in
+            if error == nil {
+                for object:PFObject in lead! {
+                    self.leadNameLabel.text = object.objectForKey("leadName") as? String
+                    self.leadContactEmailLabel.text = object.objectForKey("leadContactEmail") as? String
+                    self.leadCompanyLabel.text = object.objectForKey("leadCompany") as? String
+                    self.leadPhoneLabel.text = object.objectForKey("leadPhone") as? String
+                    self.leadRatingLabel.text = object.objectForKey("leadRating") as? String
+                    self.leadCommentsLabel.text = object.objectForKey("leadComments") as? String
+    print("the object from query: \(object)")
+    print("number of items in lead array: \(lead?.count)")
+                }
+            } else {
+                print(error)
+            }
+    }}
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+ ///////^^^
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "EditLeadSegue" {
             if let leadToEdit = self.detailedLead {

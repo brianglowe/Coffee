@@ -52,12 +52,10 @@ class EditLeadViewController: UIViewController {
         leadToEdit?.setObject(leadEmailField.text!, forKey: "leadContactEmail")
         leadToEdit?.setObject(leadRatingField.text!, forKey: "leadRating")
         print("Updating the lead details \n lead object before save in backgroung: \(leadToEdit)")
-   //     updatedLead = leadToEdit
         
         leadToEdit!.saveInBackgroundWithBlock{ succeeded, error in
             if succeeded {
                 print("this will print from saveinBackground closure")
-  //              self.tabBarController?.popoverPresentationController
             } else {
                 if let errorMessage = error?.userInfo["error"] as? String {
                     self.showErrorView(error!)

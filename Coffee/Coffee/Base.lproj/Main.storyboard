@@ -366,7 +366,7 @@
                             <outlet property="delegate" destination="XaI-9Y-U3F" id="fVY-zr-cb1"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="YaF-nQ-Djo"/>
+                    <navigationItem key="navigationItem" title="Leads" id="YaF-nQ-Djo"/>
                     <connections>
                         <outlet property="leadRecordsTable" destination="V1u-Cb-EQU" id="sdS-f7-Gr5"/>
                     </connections>
@@ -461,6 +461,11 @@
                                     <segue destination="MWU-HM-91b" kind="show" identifier="EditLeadSegue" id="cY9-E3-24a"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jaa-g2-wDF">
+                                <rect key="frame" x="263" y="508" width="75" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Add Action"/>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -479,6 +484,7 @@
                             <constraint firstItem="ezM-CQ-Ygp" firstAttribute="centerX" secondItem="tX8-u4-gT3" secondAttribute="centerX" id="XWu-s2-Gch"/>
                             <constraint firstItem="ezM-CQ-Ygp" firstAttribute="leading" secondItem="tX8-u4-gT3" secondAttribute="leadingMargin" id="bSW-tr-dbj"/>
                             <constraint firstItem="Nni-PW-ZqA" firstAttribute="trailing" secondItem="tX8-u4-gT3" secondAttribute="trailingMargin" id="f3J-5O-Clu"/>
+                            <constraint firstItem="BzN-QI-wSv" firstAttribute="top" secondItem="Jaa-g2-wDF" secondAttribute="bottom" constant="10" id="gcb-4k-dFm"/>
                             <constraint firstItem="y5M-ww-wm2" firstAttribute="centerX" secondItem="tX8-u4-gT3" secondAttribute="centerX" id="jVF-Vk-S60"/>
                             <constraint firstItem="Nni-PW-ZqA" firstAttribute="centerX" secondItem="tX8-u4-gT3" secondAttribute="centerX" id="kgd-sk-YEx"/>
                             <constraint firstItem="Na7-4K-uwR" firstAttribute="leading" secondItem="tX8-u4-gT3" secondAttribute="leadingMargin" id="kua-ND-0lH"/>
@@ -489,6 +495,7 @@
                             <constraint firstItem="ezM-CQ-Ygp" firstAttribute="trailing" secondItem="tX8-u4-gT3" secondAttribute="trailingMargin" id="s47-pG-QtI"/>
                             <constraint firstItem="aVj-QV-utW" firstAttribute="trailing" secondItem="tX8-u4-gT3" secondAttribute="trailingMargin" id="tOU-QI-85W"/>
                             <constraint firstItem="y5M-ww-wm2" firstAttribute="trailing" secondItem="tX8-u4-gT3" secondAttribute="trailingMargin" id="yNS-g6-P1I"/>
+                            <constraint firstItem="Jaa-g2-wDF" firstAttribute="centerX" secondItem="tX8-u4-gT3" secondAttribute="centerX" id="yvc-Dv-DBc"/>
                             <constraint firstItem="y5M-ww-wm2" firstAttribute="leading" secondItem="tX8-u4-gT3" secondAttribute="leadingMargin" id="zDc-hO-dMw"/>
                             <constraint firstItem="ezM-CQ-Ygp" firstAttribute="top" secondItem="sBW-Xr-Z8r" secondAttribute="bottom" constant="20" id="zb7-S5-fvg"/>
                         </constraints>
@@ -559,7 +566,17 @@
                                 </state>
                                 <connections>
                                     <action selector="submitEditButton:" destination="MWU-HM-91b" eventType="touchUpInside" id="QWk-0Y-vMd"/>
-                                    <segue destination="V8n-R3-Dcb" kind="unwind" identifier="UpdatedLeadRecord" unwindAction="unwindWithUpdatedLead:" id="e1E-uh-WQi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Slp-jv-XOb">
+                                <rect key="frame" x="241" y="506" width="119" height="36"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Save &amp; Close">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="V8n-R3-Dcb" kind="unwind" unwindAction="unwindWithUpdatedLead:" id="BSc-yx-Hxl"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -583,6 +600,8 @@
                             <constraint firstItem="i7v-se-6T7" firstAttribute="trailing" secondItem="8G1-04-AHV" secondAttribute="trailingMargin" id="ocr-6e-xXM"/>
                             <constraint firstItem="sUL-23-IaQ" firstAttribute="top" secondItem="i7v-se-6T7" secondAttribute="bottom" constant="8" id="opL-H8-u80"/>
                             <constraint firstItem="btj-J3-4ek" firstAttribute="top" secondItem="ozb-OH-Zvz" secondAttribute="bottom" constant="21" id="rxl-mh-5NJ"/>
+                            <constraint firstItem="iaf-AW-Z3N" firstAttribute="top" secondItem="Slp-jv-XOb" secondAttribute="bottom" constant="9" id="sNW-rN-0HQ"/>
+                            <constraint firstItem="Slp-jv-XOb" firstAttribute="centerX" secondItem="8G1-04-AHV" secondAttribute="centerX" id="u2z-5E-5vy"/>
                             <constraint firstItem="aJp-uM-1Fz" firstAttribute="top" secondItem="fWW-Mr-AWN" secondAttribute="bottom" constant="8" id="ujc-Jm-XFg"/>
                             <constraint firstItem="fWW-Mr-AWN" firstAttribute="trailing" secondItem="8G1-04-AHV" secondAttribute="trailingMargin" id="v2c-7f-j4e"/>
                             <constraint firstItem="fWW-Mr-AWN" firstAttribute="leading" secondItem="8G1-04-AHV" secondAttribute="leadingMargin" id="vW2-Q3-VSj"/>
