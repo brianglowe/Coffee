@@ -16,6 +16,7 @@ class EditLeadViewController: UIViewController {
     @IBOutlet weak var leadPhoneField: UITextField!
     @IBOutlet weak var leadEmailField: UITextField!
     @IBOutlet weak var leadRatingField: UITextField!
+    @IBOutlet weak var leadStatusLabel: UILabel!
     
     var leadToEdit = PFObject?() // comes from LeadDetailVC
     
@@ -44,6 +45,7 @@ class EditLeadViewController: UIViewController {
         leadPhoneField.text = leadToEdit?.objectForKey("leadPhone") as? String
         leadEmailField.text = leadToEdit?.objectForKey("leadContactEmail") as? String
         leadRatingField.text = leadToEdit?.objectForKey("leadRating") as? String
+        leadStatusLabel.text = leadToEdit?.objectForKey("status") as? String
     }
     
     func updateLeadDetails() {

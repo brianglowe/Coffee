@@ -67,10 +67,9 @@ class AddActionViewController: UIViewController {
         
         saveAndCloseButton.hidden = false
         
-     //   self.navigationController?.popToRootViewControllerAnimated(true) //** works, but testing save and close
+     //   self.navigationController?.popToRootViewControllerAnimated(true) 
+    //** works, but testing save and close
     }
-    
-    
     
     
     @IBAction func emailButton(sender: AnyObject) {
@@ -81,7 +80,6 @@ class AddActionViewController: UIViewController {
         
         voicemailButton.hidden = true
         notesButton.hidden = true
-        
     }
     
     
@@ -90,7 +88,9 @@ class AddActionViewController: UIViewController {
         commentField.hidden = false
         addtCommentsLabel.hidden = false
         submitButton.hidden = false
-
+        
+        emailButton.hidden = true
+        notesButton.hidden = true
     }
     
     
@@ -100,6 +100,8 @@ class AddActionViewController: UIViewController {
         addtCommentsLabel.hidden = false
         submitButton.hidden = false
         
+        emailButton.hidden = true
+        voicemailButton.hidden = true
     }
 
     @IBAction func submitButton(sender: UIButton) {

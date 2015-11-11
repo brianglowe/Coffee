@@ -9,16 +9,25 @@
 import UIKit
 import Parse
 
-class LeadDetailViewController: UIViewController {
+class LeadDetailViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+    @IBOutlet weak var activityTable: UITableView!
+    
+    
+    
     @IBOutlet weak var leadNameLabel: UILabel!
     @IBOutlet weak var leadContactEmailLabel: UILabel!
     @IBOutlet weak var leadCompanyLabel: UILabel!
     @IBOutlet weak var leadPhoneLabel: UILabel!
     @IBOutlet weak var leadRatingLabel: UILabel!
     @IBOutlet weak var leadCommentsLabel: UILabel!
+    @IBOutlet weak var leadStatusLabel: UILabel!
+    
     
     var detailedLead = PFObject?() // lead coming from ViewLeadsTB
+    
+    var activitiesFromQuery = [PFObject]()
+    
     
     var leadToRefresh = PFObject?()
     
@@ -26,17 +35,57 @@ class LeadDetailViewController: UIViewController {
        super.viewDidLoad()
 
         loadLead()
+        loadActivities()
     print("this is the detailed lead: \(detailedLead)")
     }
     
     override func viewWillAppear(animated: Bool) {
         loadLead()
+        loadActivities()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
+    // Mark: Activity table view methods
+    
+     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return activitiesFromQuery.count
+    }
+    
+     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        let cell:UITableViewCell = tableView.dequeueReusableCellWithIdentifier("ActivityCell", forIndexPath: indexPath)
+        let action:PFObject = self.activitiesFromQuery[indexPath.row] as PFObject
+        
+        cell.detailTextLabel?.text = action.objectForKey("updatedAt") as? String
+        cell.textLabel?.text = action.objectForKey("type") as? String
+        
+        return cell
+    }
+    
+    // Mark: load lead record's activities
+    func loadActivities() {
+        activitiesFromQuery.removeAll()
+        
+        let query = PFQuery(className: "Activity")
+        query.whereKey("assignedLead", equalTo: (detailedLead?.objectId)!)
+        query.orderByAscending("createdAt")
+        query.findObjectsInBackgroundWithBlock { (action: [PFObject]?, error: NSError?) -> Void in
+            if error == nil {
+                for object: PFObject in action! {
+                    self.activitiesFromQuery.append(object)
+                    print(self.activitiesFromQuery.capacity)
+                }
+                self.activityTable.reloadData()
+            }   else {
+                print(error)
+            }
+        }
+    }
+    
+    // Mark: - load lead records based on users
     func loadLead() {
         let query = PFQuery(className: "LeadRecord")
         query.whereKey("objectId", equalTo: (detailedLead?.objectId)!)
@@ -49,6 +98,7 @@ class LeadDetailViewController: UIViewController {
                     self.leadPhoneLabel.text = object.objectForKey("leadPhone") as? String
                     self.leadRatingLabel.text = object.objectForKey("leadRating") as? String
                     self.leadCommentsLabel.text = object.objectForKey("leadComments") as? String
+                    self.leadStatusLabel.text = object.objectForKey("status") as? String
     print("the object from query: \(object)")
     print("number of items in lead array: \(lead?.count)")
                 }
@@ -57,7 +107,7 @@ class LeadDetailViewController: UIViewController {
             }
     }}
     
- ///////^^^
+    // Mark: Seque methods
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "EditLeadSegue" {
             if let leadToEdit = self.detailedLead {
