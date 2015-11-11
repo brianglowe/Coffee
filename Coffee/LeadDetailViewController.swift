@@ -71,7 +71,8 @@ class LeadDetailViewController: UIViewController, UITableViewDataSource, UITable
         
         let query = PFQuery(className: "Activity")
         query.whereKey("assignedLead", equalTo: (detailedLead?.objectId)!)
-        query.orderByAscending("createdAt")
+
+        query.orderByDescending("createdAt")
         query.findObjectsInBackgroundWithBlock { (action: [PFObject]?, error: NSError?) -> Void in
             if error == nil {
                 for object: PFObject in action! {

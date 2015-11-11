@@ -10,6 +10,15 @@ import UIKit
 
 class UpdateStatusViewController: UIViewController {
 
+    @IBOutlet weak var pendingButton: UIButton!
+    @IBOutlet weak var winButton: UIButton!
+    @IBOutlet weak var lostButton: UIButton!
+    
+    @IBOutlet weak var leadNameLabel: UILabel!
+    @IBOutlet weak var addtCommentsLabel: UILabel!
+    @IBOutlet weak var commentField: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -32,4 +41,16 @@ class UpdateStatusViewController: UIViewController {
     }
     */
 
+    @IBAction func pushPendingButton(sender: AnyObject) {
+    }
+    
+    @IBAction func pushWinButton(sender: AnyObject) {
+    }
+    
+    @IBAction func pushLostButton(sender: AnyObject) {
+    }
+    
+    @IBAction func pushUpdateButton(sender: AnyObject) {
+    }
+    
 }
