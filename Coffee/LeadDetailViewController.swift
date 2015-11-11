@@ -57,17 +57,6 @@ class LeadDetailViewController: UIViewController {
             }
     }}
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
  ///////^^^
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "EditLeadSegue" {
@@ -76,7 +65,16 @@ class LeadDetailViewController: UIViewController {
                 EditLeadController.leadToEdit = leadToEdit
                 print("the lead coming from LeadDetailVC: \(leadToEdit)")
             }
-    }}
+        } else if segue.identifier == "AddActionSegue" {
+            if let lead = self.detailedLead {
+                let AddActionVC: AddActionViewController = segue.destinationViewController as! AddActionViewController
+                AddActionVC.leadForAction = lead
+                print("lead going to AddActionVC: \(lead)")
+            }
+        }
+    
+    
+    }
     
     @IBAction func editLeadButton(sender: AnyObject) {
     }
