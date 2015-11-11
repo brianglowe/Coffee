@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D35BDE8C1BF323C00070DDC1 /* AddActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35BDE8B1BF323C00070DDC1 /* AddActionViewController.swift */; };
 		D381DED91BF12988008AA04D /* EditLeadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D381DED81BF12988008AA04D /* EditLeadViewController.swift */; };
 		D3886B071BED55A200824D3F /* PhotosUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3886B061BED55A200824D3F /* PhotosUI.framework */; };
 		D3886B091BED567800824D3F /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3886B081BED567800824D3F /* ParseUI.framework */; };
@@ -58,6 +59,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D35BDE8B1BF323C00070DDC1 /* AddActionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddActionViewController.swift; sourceTree = "<group>"; };
 		D381DED81BF12988008AA04D /* EditLeadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditLeadViewController.swift; sourceTree = "<group>"; };
 		D3886B031BED53F800824D3F /* Coffee-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Coffee-Bridging-Header.h"; sourceTree = "<group>"; };
 		D3886B061BED55A200824D3F /* PhotosUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PhotosUI.framework; path = System/Library/Frameworks/PhotosUI.framework; sourceTree = SDKROOT; };
@@ -220,6 +222,7 @@
 				D39E684B1BED300600F741D9 /* ViewLeadsTableViewController.swift */,
 				D39262C21BEEF5A20074856E /* LeadDetailViewController.swift */,
 				D381DED81BF12988008AA04D /* EditLeadViewController.swift */,
+				D35BDE8B1BF323C00070DDC1 /* AddActionViewController.swift */,
 			);
 			name = Controllers;
 			path = ..;
@@ -378,6 +381,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D39262C31BEEF5A20074856E /* LeadDetailViewController.swift in Sources */,
+				D35BDE8C1BF323C00070DDC1 /* AddActionViewController.swift in Sources */,
 				D39E684E1BED460800F741D9 /* ViewLeadTableViewCell.swift in Sources */,
 				D381DED91BF12988008AA04D /* EditLeadViewController.swift in Sources */,
 				D3E027341BEC425800CD25BD /* LoginViewController.swift in Sources */,
