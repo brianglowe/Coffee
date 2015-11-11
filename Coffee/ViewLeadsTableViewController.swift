@@ -16,11 +16,8 @@ class ViewLeadsTableViewController: UITableViewController {
     
     var leadRecordsFromQuery = [PFObject]()
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-//        loadData()
-
 
         print("opened")
     }
@@ -55,11 +52,6 @@ class ViewLeadsTableViewController: UITableViewController {
         
         return cell
     }
-//    
-//    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-//        
-//    }
-    
     
     func loadData() {
         leadRecordsFromQuery.removeAll()

@@ -18,7 +18,9 @@ class LeadDetailViewController: UIViewController {
     @IBOutlet weak var leadRatingLabel: UILabel!
     @IBOutlet weak var leadCommentsLabel: UILabel!
     
-    var detailedLead = PFObject?()
+    var detailedLead = PFObject?() // lead coming from ViewLeadsTB
+    
+    var leadToRefresh = PFObject?()
     
     func showLeadDetails() {
         leadNameLabel.text = detailedLead?.objectForKey("leadName") as? String
@@ -32,40 +34,45 @@ class LeadDetailViewController: UIViewController {
     override func viewDidLoad() {
        super.viewDidLoad()
 
+        print("this is the detailed lead: \(detailedLead)")
+        
         showLeadDetails()
 //        self.showLeadDetails()
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "EditLeadSegue" {
             if let leadToEdit = self.detailedLead {
-                let destinationController: EditLeadViewController = segue.destinationViewController as! EditLeadViewController
-                destinationController.leadToEdit = leadToEdit
+                let EditLeadController: EditLeadViewController = segue.destinationViewController as! EditLeadViewController
+                EditLeadController.leadToEdit = leadToEdit
                 print("the lead coming from LeadDetailVC: \(leadToEdit)")
             }
-        }
-    }
+    }}
     
     @IBAction func editLeadButton(sender: AnyObject) {
     }
     
-    // 1- Add ability to edit the current lead record
-    // add button to add action / activity to the record.
+// this unwind segue needs to set up this controller to receive the updated lead from
+// the EditLeadVC
+    @IBAction func unwindWithUpdatedLead(segue:UIStoryboardSegue) {
+        if let editLeadVC = segue.sourceViewController as? EditLeadViewController {
+            if let lead = editLeadVC.updatedLead {
+                detailedLead = lead
+            }
+        }
+        print(" printed from unwind: \(detailedLead)")
+        print("this is the unwind segue print statement")
+    }
+
+    
+    
     
     
 }
-
-
-
-
-
-
 
 
 
