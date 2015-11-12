@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D3118D571BF3D1AA0083BC37 /* UpdateStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3118D561BF3D1AA0083BC37 /* UpdateStatusViewController.swift */; };
+		D32FCEA41BF43CD7003E8D0E /* ActivityDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32FCEA31BF43CD7003E8D0E /* ActivityDetailViewController.swift */; };
 		D35BDE8C1BF323C00070DDC1 /* AddActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35BDE8B1BF323C00070DDC1 /* AddActionViewController.swift */; };
 		D381DED91BF12988008AA04D /* EditLeadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D381DED81BF12988008AA04D /* EditLeadViewController.swift */; };
 		D3886B071BED55A200824D3F /* PhotosUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3886B061BED55A200824D3F /* PhotosUI.framework */; };
@@ -61,6 +62,7 @@
 
 /* Begin PBXFileReference section */
 		D3118D561BF3D1AA0083BC37 /* UpdateStatusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateStatusViewController.swift; sourceTree = "<group>"; };
+		D32FCEA31BF43CD7003E8D0E /* ActivityDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityDetailViewController.swift; sourceTree = "<group>"; };
 		D35BDE8B1BF323C00070DDC1 /* AddActionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddActionViewController.swift; sourceTree = "<group>"; };
 		D381DED81BF12988008AA04D /* EditLeadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditLeadViewController.swift; sourceTree = "<group>"; };
 		D3886B031BED53F800824D3F /* Coffee-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Coffee-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -226,6 +228,7 @@
 				D381DED81BF12988008AA04D /* EditLeadViewController.swift */,
 				D35BDE8B1BF323C00070DDC1 /* AddActionViewController.swift */,
 				D3118D561BF3D1AA0083BC37 /* UpdateStatusViewController.swift */,
+				D32FCEA31BF43CD7003E8D0E /* ActivityDetailViewController.swift */,
 			);
 			name = Controllers;
 			path = ..;
@@ -383,6 +386,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D32FCEA41BF43CD7003E8D0E /* ActivityDetailViewController.swift in Sources */,
 				D39262C31BEEF5A20074856E /* LeadDetailViewController.swift in Sources */,
 				D35BDE8C1BF323C00070DDC1 /* AddActionViewController.swift in Sources */,
 				D39E684E1BED460800F741D9 /* ViewLeadTableViewCell.swift in Sources */,

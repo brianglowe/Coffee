@@ -662,7 +662,7 @@
         <!--Activity Detail-->
         <scene sceneID="mev-GK-Xk7">
             <objects>
-                <viewController title="Activity Detail" id="VXG-uK-5C6" sceneMemberID="viewController">
+                <viewController title="Activity Detail" id="VXG-uK-5C6" customClass="ActivityDetailViewController" customModule="Coffee" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fWm-4r-ZDn"/>
                         <viewControllerLayoutGuide type="bottom" id="Ngj-ak-Y2Z"/>
@@ -681,13 +681,6 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dcn-Hv-ORl">
-                                <rect key="frame" x="20" y="233.5" width="84" height="20.5"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comments:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SBA-Qi-oXV">
@@ -718,13 +711,23 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comments Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RmN-bM-Jw9">
+                                <rect key="frame" x="188" y="157" width="392" height="20.5"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aET-SW-izF">
                                 <rect key="frame" x="281" y="285" width="39" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Close"/>
+                                <connections>
+                                    <action selector="pushCloseButton:" destination="VXG-uK-5C6" eventType="touchUpInside" id="BAn-IO-ij2"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comments Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RmN-bM-Jw9">
-                                <rect key="frame" x="188" y="157" width="392" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dcn-Hv-ORl">
+                                <rect key="frame" x="20" y="233" width="84" height="20.5"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -766,6 +769,12 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="activityCommentLabel" destination="RmN-bM-Jw9" id="h6X-5q-Are"/>
+                        <outlet property="activityDateLabel" destination="Dcn-Hv-ORl" id="tvN-3A-fxD"/>
+                        <outlet property="activityTypeLabel" destination="ZQH-av-MnA" id="4fD-Ef-jIG"/>
+                        <outlet property="leadNameLabel" destination="3vc-8a-k6h" id="hz2-Fg-sap"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ud8-CQ-GaM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

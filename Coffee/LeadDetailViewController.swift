@@ -8,6 +8,7 @@
 
 import UIKit
 import Parse
+import ParseUI
 
 class LeadDetailViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
@@ -24,6 +25,7 @@ class LeadDetailViewController: UIViewController, UITableViewDataSource, UITable
     var detailedLead = PFObject?() // lead coming from ViewLeadsTB
     
     var activitiesFromQuery = [PFObject]()
+    var detailActivity = PFObject?()
     
     var leadToRefresh = PFObject?()
     
@@ -61,6 +63,9 @@ class LeadDetailViewController: UIViewController, UITableViewDataSource, UITable
         
         return cell
     }
+    
+
+    
     
     // Mark: load lead record's activities
     func loadActivities() {
@@ -119,6 +124,14 @@ class LeadDetailViewController: UIViewController, UITableViewDataSource, UITable
                 AddActionVC.leadForAction = lead
                 print("lead going to AddActionVC: \(lead)")
             }
+        } else if segue.identifier == "ActivityDetailSegue" {
+            if let indexPath = self.activityTable.indexPathForSelectedRow {
+                let activity = activitiesFromQuery[indexPath.row]
+                let detailActivityVC: ActivityDetailViewController = segue.destinationViewController as! ActivityDetailViewController
+                detailActivityVC.activity = activity
+                detailActivityVC.lead = self.detailedLead
+                print("the activity coming from the LeadDetailVC: \(activity)")
+            }
         } else {
             if let update = self.detailedLead {
                 let UpdateStatusVC: UpdateStatusViewController = segue.destinationViewController as! UpdateStatusViewController
@@ -126,8 +139,6 @@ class LeadDetailViewController: UIViewController, UITableViewDataSource, UITable
                 print("lead going to UpdateStatusVC: \(update)")
             }
         }
-    
-    
     }
     
     @IBAction func editLeadButton(sender: AnyObject) {
