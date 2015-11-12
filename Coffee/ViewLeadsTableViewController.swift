@@ -58,6 +58,7 @@ class ViewLeadsTableViewController: UITableViewController {
         
         let query = PFQuery(className: "LeadRecord")
         query.whereKey("createdBy", equalTo: PFUser.currentUser()!)
+        query.whereKey("status", equalTo: "pending")
         query.orderByAscending("createdAt")
         query.findObjectsInBackgroundWithBlock { (leads: [PFObject]?, error: NSError?) -> Void in
             if error == nil {
