@@ -1330,6 +1330,7 @@
                         <barButtonItem key="backBarButtonItem" systemItem="cancel" id="edi-hr-5uP"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="cancelButton" destination="zym-bK-d9T" id="vzH-PD-rV8"/>
                         <outlet property="leadCommentsField" destination="grI-pY-uZP" id="mxf-aO-c08"/>
                         <outlet property="leadCompanyField" destination="qnI-B0-sJa" id="HrU-VP-hAe"/>
                         <outlet property="leadEmailField" destination="aU3-lN-CVA" id="VUg-II-aWk"/>

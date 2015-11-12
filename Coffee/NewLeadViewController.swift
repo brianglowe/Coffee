@@ -17,6 +17,7 @@ class NewLeadViewController: UIViewController {
     @IBOutlet weak var leadNumberField: UITextField!
     @IBOutlet weak var leadRatingField: UITextField!
     @IBOutlet weak var leadCommentsField: UITextField!
+    @IBOutlet weak var cancelButton: UIButton!
     
     
     override func viewDidLoad() {
@@ -42,6 +43,7 @@ class NewLeadViewController: UIViewController {
         lead.setObject(PFUser.currentUser()!, forKey: "createdBy")
         lead.saveInBackgroundWithBlock{ succeeded, error in
             if succeeded {
+                
                 self.tabBarController?.popoverPresentationController
             } else {
                 if let errorMessage = error?.userInfo["error"] as? String {
