@@ -22,6 +22,8 @@ class ActivityDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        print("printing the activity date created: \(self.activity?.objectForKey("createdAt"))")
+        
         showActivityDetails()
         // Do any additional setup after loading the view.
     }
