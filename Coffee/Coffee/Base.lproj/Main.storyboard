@@ -1255,6 +1255,9 @@
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="next"/>
+                                <connections>
+                                    <action selector="validateEmail:" destination="lU3-DI-TNT" eventType="editingDidEnd" id="T4b-4A-6OW"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="company name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qnI-B0-sJa">
                                 <rect key="frame" x="20" y="208" width="560" height="30"/>
@@ -1292,6 +1295,20 @@
                                     <action selector="submitPressed:" destination="lU3-DI-TNT" eventType="touchUpInside" id="SIO-ub-Tia"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vSd-Zv-i63">
+                                <rect key="frame" x="20" y="522" width="74" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Test email label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TfX-rw-LNT">
+                                <rect key="frame" x="20" y="493" width="118" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.37854646380000001" green="0.5" blue="0.95027240950000003" alpha="0.55342060810810811" colorSpace="calibratedRGB"/>
@@ -1301,6 +1318,7 @@
                             <constraint firstItem="sd4-Hi-l1g" firstAttribute="centerX" secondItem="xpr-hd-LrX" secondAttribute="centerX" id="3EI-Yf-ql5"/>
                             <constraint firstAttribute="trailingMargin" secondItem="zym-bK-d9T" secondAttribute="trailing" id="3fv-LX-ydY"/>
                             <constraint firstItem="aVp-Io-U8v" firstAttribute="top" secondItem="sd4-Hi-l1g" secondAttribute="bottom" constant="10" id="7p1-e9-HHH"/>
+                            <constraint firstItem="vSd-Zv-i63" firstAttribute="leading" secondItem="xpr-hd-LrX" secondAttribute="leadingMargin" id="93p-U1-ZCg"/>
                             <constraint firstItem="sd4-Hi-l1g" firstAttribute="trailing" secondItem="xpr-hd-LrX" secondAttribute="trailingMargin" id="ACs-Jk-a5U"/>
                             <constraint firstItem="sd4-Hi-l1g" firstAttribute="top" secondItem="qnI-B0-sJa" secondAttribute="bottom" constant="10" id="AJb-Yn-TzO"/>
                             <constraint firstItem="aU3-lN-CVA" firstAttribute="trailing" secondItem="xpr-hd-LrX" secondAttribute="trailingMargin" id="Axy-yF-0oK"/>
@@ -1310,7 +1328,9 @@
                             <constraint firstItem="aVp-Io-U8v" firstAttribute="trailing" secondItem="xpr-hd-LrX" secondAttribute="trailingMargin" id="LDi-ef-aCI"/>
                             <constraint firstItem="EJi-iz-Sho" firstAttribute="top" secondItem="zym-bK-d9T" secondAttribute="bottom" constant="20" id="MpO-L4-rzU"/>
                             <constraint firstItem="93n-fX-LMW" firstAttribute="top" secondItem="grI-pY-uZP" secondAttribute="bottom" constant="15" id="NNL-lB-niL"/>
+                            <constraint firstItem="TfX-rw-LNT" firstAttribute="leading" secondItem="xpr-hd-LrX" secondAttribute="leadingMargin" id="OJG-5i-c91"/>
                             <constraint firstItem="qnI-B0-sJa" firstAttribute="centerX" secondItem="xpr-hd-LrX" secondAttribute="centerX" id="Tiu-1B-Iv0"/>
+                            <constraint firstItem="vSd-Zv-i63" firstAttribute="top" secondItem="TfX-rw-LNT" secondAttribute="bottom" constant="8" id="WbJ-Zq-yEn"/>
                             <constraint firstItem="zym-bK-d9T" firstAttribute="top" secondItem="a7Q-Ih-yPS" secondAttribute="bottom" constant="8" id="Yrc-jl-Bjl"/>
                             <constraint firstItem="EJi-iz-Sho" firstAttribute="centerX" secondItem="xpr-hd-LrX" secondAttribute="centerX" id="c81-rW-R0F"/>
                             <constraint firstItem="aU3-lN-CVA" firstAttribute="centerX" secondItem="xpr-hd-LrX" secondAttribute="centerX" id="elB-T7-XOw"/>
@@ -1321,6 +1341,7 @@
                             <constraint firstItem="grI-pY-uZP" firstAttribute="trailing" secondItem="xpr-hd-LrX" secondAttribute="trailingMargin" id="pz1-Wc-pm5"/>
                             <constraint firstItem="aVp-Io-U8v" firstAttribute="centerX" secondItem="xpr-hd-LrX" secondAttribute="centerX" id="sIC-ET-YeN"/>
                             <constraint firstItem="qnI-B0-sJa" firstAttribute="trailing" secondItem="xpr-hd-LrX" secondAttribute="trailingMargin" id="sYF-D8-BOS"/>
+                            <constraint firstItem="RsJ-ez-9bJ" firstAttribute="top" secondItem="vSd-Zv-i63" secondAttribute="bottom" constant="8" id="vah-pV-TQ3"/>
                             <constraint firstItem="aU3-lN-CVA" firstAttribute="top" secondItem="EJi-iz-Sho" secondAttribute="bottom" constant="10" id="w71-Lu-V2K"/>
                             <constraint firstItem="aU3-lN-CVA" firstAttribute="leading" secondItem="xpr-hd-LrX" secondAttribute="leadingMargin" id="wPo-x5-oKi"/>
                             <constraint firstItem="aVp-Io-U8v" firstAttribute="leading" secondItem="xpr-hd-LrX" secondAttribute="leadingMargin" id="zHW-nq-JDW"/>
@@ -1331,12 +1352,14 @@
                     </navigationItem>
                     <connections>
                         <outlet property="cancelButton" destination="zym-bK-d9T" id="vzH-PD-rV8"/>
+                        <outlet property="emailVerifyMessage" destination="TfX-rw-LNT" id="CG3-VH-inw"/>
                         <outlet property="leadCommentsField" destination="grI-pY-uZP" id="mxf-aO-c08"/>
                         <outlet property="leadCompanyField" destination="qnI-B0-sJa" id="HrU-VP-hAe"/>
                         <outlet property="leadEmailField" destination="aU3-lN-CVA" id="VUg-II-aWk"/>
                         <outlet property="leadNameField" destination="EJi-iz-Sho" id="hoh-LE-bPd"/>
                         <outlet property="leadNumberField" destination="sd4-Hi-l1g" id="fjN-7d-75R"/>
                         <outlet property="leadRatingField" destination="aVp-Io-U8v" id="1jC-Wg-cSM"/>
+                        <outlet property="verifyMessage" destination="vSd-Zv-i63" id="uty-RO-tK1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JDB-P8-Z2t" userLabel="First Responder" sceneMemberID="firstResponder"/>

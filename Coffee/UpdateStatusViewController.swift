@@ -19,6 +19,8 @@ class UpdateStatusViewController: UIViewController {
     @IBOutlet weak var leadNameLabel: UILabel!
     @IBOutlet weak var addtCommentsLabel: UILabel!
     @IBOutlet weak var commentField: UITextField!
+ 
+    
     
     var leadToUpdate = PFObject?()
     

@@ -19,10 +19,19 @@ class NewLeadViewController: UIViewController {
     @IBOutlet weak var leadCommentsField: UITextField!
     @IBOutlet weak var cancelButton: UIButton!
     
+    //MARK: SwiftCop Fun
+    
+    @IBOutlet weak var verifyMessage: UILabel!
+    @IBOutlet weak var emailVerifyMessage: UILabel!
+    
+    let swiftCop = SwiftCop()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        // trying out swiftcop
+        swiftCop.addSuspect(Suspect(view:self.leadEmailField, sentence: "Invalid email", trial: Trial.Email))
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -63,12 +72,17 @@ class NewLeadViewController: UIViewController {
     }
     
     
+    @IBAction func validateEmail(sender: UITextField) {
+        self.emailVerifyMessage.text = swiftCop.isGuilty(sender)?.verdict()
+    }
     
     @IBAction func submitPressed(sender: AnyObject) {
         saveLead()
         clearFields()
     }
 
+
+    
 }
 
 
