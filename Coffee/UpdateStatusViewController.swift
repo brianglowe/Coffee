@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class UpdateStatusViewController: UIViewController {
 
@@ -18,11 +19,15 @@ class UpdateStatusViewController: UIViewController {
     @IBOutlet weak var addtCommentsLabel: UILabel!
     @IBOutlet weak var commentField: UITextField!
     
+    var leadToUpdate = PFObject?()
+    
+    var status: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        print("leadToUpdate at ViewDidLoad: \(leadToUpdate)")
+        initiateView()
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,27 +35,91 @@ class UpdateStatusViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // MARK: present name of lead record & beginning view
+    func presentLeadName() {
+        if let name = leadToUpdate {
+            leadNameLabel.text = leadToUpdate?.objectForKey("leadName") as? String
+        }
     }
-    */
+    
+    func initiateView() {
+        presentLeadName()
+        pendingButton.hidden = true
+        commentField.hidden = true
+        addtCommentsLabel.hidden = true
+        commentField.hidden = true
+    }
+    
+    // MARK: updating lead status methods
+    func showCommentInput() {
+        if self.status == "win" {
+            addtCommentsLabel.hidden = false
+            commentField.hidden = false
+            lostButton.hidden = true
+        } else {
+            addtCommentsLabel.hidden = false
+            commentField.hidden = false
+            winButton.hidden = true
+        }
+    }
 
+    // MARK: UPDATE PARSE
+    // Update the LeadRecord Object property of "status"
+    func updateLeadRecordStatus() {
+        leadToUpdate?.setObject(self.status!, forKey: "status")
+        leadToUpdate!.saveInBackgroundWithBlock{ succeeded, error in
+            if succeeded {
+                print("this will print from updateLeadRecordStatus closure")
+            } else {
+                if let errorMessage = error?.userInfo["error"] as? String {
+                    self.showErrorView(error!)
+                }
+        }}
+    }
+    
+    // Create Activity of type Closed for assigned lead record
+    func createCloseActivity() { //Test to see if successfully update without taking a parameter
+        let update = PFObject(className: "Activity")
+        update.setObject(self.status!, forKey: "type")
+        update.setObject(commentField.text!, forKey: "comments")
+        update.setObject((leadToUpdate?.objectId)!, forKey: "assignedLead")
+        update.saveEventually {(success, error) -> Void in
+            if (error == nil) {
+                
+            } else {
+                print(error?.userInfo)
+            }
+        }
+        
+        
+    }
+
+    // MARK: button methods
     @IBAction func pushPendingButton(sender: AnyObject) {
     }
     
     @IBAction func pushWinButton(sender: AnyObject) {
+        self.status = "win"
+        showCommentInput()
     }
     
     @IBAction func pushLostButton(sender: AnyObject) {
+        self.status = "lost"
+        showCommentInput()
     }
     
     @IBAction func pushUpdateButton(sender: AnyObject) {
     }
     
 }
+
+
+
+
+
+
+
+
+
+
+

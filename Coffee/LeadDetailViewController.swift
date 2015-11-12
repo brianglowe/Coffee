@@ -13,8 +13,6 @@ class LeadDetailViewController: UIViewController, UITableViewDataSource, UITable
 
     @IBOutlet weak var activityTable: UITableView!
     
-    
-    
     @IBOutlet weak var leadNameLabel: UILabel!
     @IBOutlet weak var leadContactEmailLabel: UILabel!
     @IBOutlet weak var leadCompanyLabel: UILabel!
@@ -23,11 +21,9 @@ class LeadDetailViewController: UIViewController, UITableViewDataSource, UITable
     @IBOutlet weak var leadCommentsLabel: UILabel!
     @IBOutlet weak var leadStatusLabel: UILabel!
     
-    
     var detailedLead = PFObject?() // lead coming from ViewLeadsTB
     
     var activitiesFromQuery = [PFObject]()
-    
     
     var leadToRefresh = PFObject?()
     
@@ -36,6 +32,7 @@ class LeadDetailViewController: UIViewController, UITableViewDataSource, UITable
 
         loadLead()
         loadActivities()
+        
     print("this is the detailed lead: \(detailedLead)")
     }
     
@@ -121,6 +118,12 @@ class LeadDetailViewController: UIViewController, UITableViewDataSource, UITable
                 let AddActionVC: AddActionViewController = segue.destinationViewController as! AddActionViewController
                 AddActionVC.leadForAction = lead
                 print("lead going to AddActionVC: \(lead)")
+            }
+        } else {
+            if let update = self.detailedLead {
+                let UpdateStatusVC: UpdateStatusViewController = segue.destinationViewController as! UpdateStatusViewController
+                UpdateStatusVC.leadToUpdate = update
+                print("lead going to UpdateStatusVC: \(update)")
             }
         }
     

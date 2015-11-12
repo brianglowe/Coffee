@@ -38,6 +38,7 @@ class NewLeadViewController: UIViewController {
         lead.setObject(leadNumberField.text!, forKey: "leadPhone")
         lead.setObject(leadRatingField.text!, forKey: "leadRating")
         lead.setObject(leadCommentsField.text!, forKey: "leadComments")
+        lead.setObject("pending", forKey: "status")
         lead.setObject(PFUser.currentUser()!, forKey: "createdBy")
         lead.saveInBackgroundWithBlock{ succeeded, error in
             if succeeded {

@@ -483,7 +483,7 @@
                                 </constraints>
                                 <state key="normal" title="Add Action"/>
                                 <connections>
-                                    <segue destination="ePN-Vh-t8x" kind="show" identifier="AddActionSegue" id="cQZ-lR-aEP"/>
+                                    <segue destination="ePN-Vh-t8x" kind="show" identifier="AddActionSegue" id="m5w-Pk-0xQ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H70-Je-mmk">
@@ -493,9 +493,9 @@
                                     <constraint firstAttribute="height" constant="30" id="95D-cY-lCc"/>
                                     <constraint firstAttribute="width" constant="99" id="pJa-fG-fnq"/>
                                 </constraints>
-                                <state key="normal" title="Update Status"/>
+                                <state key="normal" title="Close Lead"/>
                                 <connections>
-                                    <segue destination="CIg-8Q-I11" kind="show" identifier="UpdateStatusSegue" id="R47-MH-FKc"/>
+                                    <segue destination="CIg-8Q-I11" kind="show" id="lIg-jf-UKU"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lead Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pvF-IQ-CCm">
@@ -668,14 +668,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Eui-Nj-Mae">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" text="Add your comments here..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Eui-Nj-Mae">
                                 <rect key="frame" x="20" y="236" width="560" height="128"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.1764705882" green="0.1843137255" blue="0.20000000000000001" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="IFD-a7-O4n"/>
                                 </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in </string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -902,7 +901,6 @@
                         <outlet property="leadNameLabel" destination="oEb-0e-7Uy" id="QhQ-bO-FLx"/>
                         <outlet property="lostButton" destination="XWF-aJ-q6a" id="KQh-Oh-r8n"/>
                         <outlet property="pendingButton" destination="5R1-WJ-MHa" id="2xa-OU-YKB"/>
-                        <outlet property="pushWinningButton" destination="lsP-lf-cyN" id="yrl-2Y-Fje"/>
                         <outlet property="winButton" destination="lsP-lf-cyN" id="nd2-uG-FPM"/>
                     </connections>
                 </viewController>
@@ -940,7 +938,7 @@
                                 <rect key="frame" x="20" y="231.5" width="560" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="done"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Lead Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fWW-Mr-AWN">
                                 <rect key="frame" x="20" y="299" width="560" height="30"/>
