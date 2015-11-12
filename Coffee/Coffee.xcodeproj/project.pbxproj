@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		D3118D571BF3D1AA0083BC37 /* UpdateStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3118D561BF3D1AA0083BC37 /* UpdateStatusViewController.swift */; };
 		D32FCEA41BF43CD7003E8D0E /* ActivityDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32FCEA31BF43CD7003E8D0E /* ActivityDetailViewController.swift */; };
+		D33156111BF50B250075AFB9 /* Suspect.swift in Sources */ = {isa = PBXBuildFile; fileRef = D331560E1BF50B250075AFB9 /* Suspect.swift */; };
+		D33156121BF50B250075AFB9 /* SwiftCop.swift in Sources */ = {isa = PBXBuildFile; fileRef = D331560F1BF50B250075AFB9 /* SwiftCop.swift */; };
+		D33156131BF50B250075AFB9 /* Trial.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33156101BF50B250075AFB9 /* Trial.swift */; };
 		D35BDE8C1BF323C00070DDC1 /* AddActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35BDE8B1BF323C00070DDC1 /* AddActionViewController.swift */; };
 		D381DED91BF12988008AA04D /* EditLeadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D381DED81BF12988008AA04D /* EditLeadViewController.swift */; };
 		D3886B071BED55A200824D3F /* PhotosUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3886B061BED55A200824D3F /* PhotosUI.framework */; };
@@ -63,6 +66,9 @@
 /* Begin PBXFileReference section */
 		D3118D561BF3D1AA0083BC37 /* UpdateStatusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateStatusViewController.swift; sourceTree = "<group>"; };
 		D32FCEA31BF43CD7003E8D0E /* ActivityDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityDetailViewController.swift; sourceTree = "<group>"; };
+		D331560E1BF50B250075AFB9 /* Suspect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Suspect.swift; sourceTree = "<group>"; };
+		D331560F1BF50B250075AFB9 /* SwiftCop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftCop.swift; sourceTree = "<group>"; };
+		D33156101BF50B250075AFB9 /* Trial.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trial.swift; sourceTree = "<group>"; };
 		D35BDE8B1BF323C00070DDC1 /* AddActionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddActionViewController.swift; sourceTree = "<group>"; };
 		D381DED81BF12988008AA04D /* EditLeadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditLeadViewController.swift; sourceTree = "<group>"; };
 		D3886B031BED53F800824D3F /* Coffee-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Coffee-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -143,6 +149,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D331560D1BF50B250075AFB9 /* SwiftCop */ = {
+			isa = PBXGroup;
+			children = (
+				D331560E1BF50B250075AFB9 /* Suspect.swift */,
+				D331560F1BF50B250075AFB9 /* SwiftCop.swift */,
+				D33156101BF50B250075AFB9 /* Trial.swift */,
+			);
+			path = SwiftCop;
+			sourceTree = "<group>";
+		};
 		D39E68431BEC6CA700F741D9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -168,6 +184,7 @@
 				D3E027181BEC37D700CD25BD /* CoffeeTests */,
 				D3E027231BEC37D700CD25BD /* CoffeeUITests */,
 				D3E027021BEC37D700CD25BD /* Products */,
+				D331560D1BF50B250075AFB9 /* SwiftCop */,
 				D3E027391BEC44A700CD25BD /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -390,8 +407,10 @@
 				D39262C31BEEF5A20074856E /* LeadDetailViewController.swift in Sources */,
 				D35BDE8C1BF323C00070DDC1 /* AddActionViewController.swift in Sources */,
 				D39E684E1BED460800F741D9 /* ViewLeadTableViewCell.swift in Sources */,
+				D33156131BF50B250075AFB9 /* Trial.swift in Sources */,
 				D381DED91BF12988008AA04D /* EditLeadViewController.swift in Sources */,
 				D3118D571BF3D1AA0083BC37 /* UpdateStatusViewController.swift in Sources */,
+				D33156121BF50B250075AFB9 /* SwiftCop.swift in Sources */,
 				D3E027341BEC425800CD25BD /* LoginViewController.swift in Sources */,
 				D3E027381BEC427700CD25BD /* ForgotPasswordViewController.swift in Sources */,
 				D39E684C1BED300600F741D9 /* ViewLeadsTableViewController.swift in Sources */,
@@ -401,6 +420,7 @@
 				D39E68451BEC6CC200F741D9 /* LeadRecord.swift in Sources */,
 				D3E027051BEC37D700CD25BD /* AppDelegate.swift in Sources */,
 				D39E68421BEC6A5C00F741D9 /* NewLeadViewController.swift in Sources */,
+				D33156111BF50B250075AFB9 /* Suspect.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
