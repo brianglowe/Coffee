@@ -14,6 +14,7 @@ class UpdateStatusViewController: UIViewController {
     @IBOutlet weak var pendingButton: UIButton!
     @IBOutlet weak var winButton: UIButton!
     @IBOutlet weak var lostButton: UIButton!
+    @IBOutlet weak var closeButton: UIButton!
     
     @IBOutlet weak var leadNameLabel: UILabel!
     @IBOutlet weak var addtCommentsLabel: UILabel!
@@ -48,6 +49,7 @@ class UpdateStatusViewController: UIViewController {
         commentField.hidden = true
         addtCommentsLabel.hidden = true
         commentField.hidden = true
+        closeButton.hidden = true
     }
     
     // MARK: updating lead status methods
@@ -85,7 +87,7 @@ class UpdateStatusViewController: UIViewController {
         update.setObject((leadToUpdate?.objectId)!, forKey: "assignedLead")
         update.saveEventually {(success, error) -> Void in
             if (error == nil) {
-                
+                self.closeButton.hidden = false
             } else {
                 print(error?.userInfo)
             }
@@ -109,6 +111,13 @@ class UpdateStatusViewController: UIViewController {
     }
     
     @IBAction func pushUpdateButton(sender: AnyObject) {
+        updateLeadRecordStatus()
+        createCloseActivity()
+        print("update Button pressed")
+    }
+    
+    @IBAction func pushCloseButton(sender: UIButton) {
+        self.navigationController?.popToRootViewControllerAnimated(true)
     }
     
 }

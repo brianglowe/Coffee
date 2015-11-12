@@ -858,9 +858,17 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8DS-OW-Yu5">
                                 <rect key="frame" x="20" y="392" width="560" height="30"/>
                                 <animations/>
-                                <state key="normal" title="Update and Close"/>
+                                <state key="normal" title="Update"/>
                                 <connections>
                                     <action selector="pushUpdateButton:" destination="CIg-8Q-I11" eventType="touchUpInside" id="QRM-Zf-8iI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zix-Eo-d1c">
+                                <rect key="frame" x="20" y="449" width="560" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Close Lead"/>
+                                <connections>
+                                    <action selector="pushCloseButton:" destination="CIg-8Q-I11" eventType="touchUpInside" id="YYA-pw-hqM"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -897,6 +905,7 @@
                     </view>
                     <connections>
                         <outlet property="addtCommentsLabel" destination="3C6-h7-eh2" id="w6x-eL-LCB"/>
+                        <outlet property="closeButton" destination="Zix-Eo-d1c" id="6nI-Rf-pji"/>
                         <outlet property="commentField" destination="N4E-U7-G1a" id="qtV-NI-I72"/>
                         <outlet property="leadNameLabel" destination="oEb-0e-7Uy" id="QhQ-bO-FLx"/>
                         <outlet property="lostButton" destination="XWF-aJ-q6a" id="KQh-Oh-r8n"/>
