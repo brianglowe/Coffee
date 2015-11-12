@@ -29,10 +29,10 @@ class SignupViewController: UIViewController {
     
     @IBAction func signUpAction(sender: AnyObject) {
         
-        var username = self.usernameField.text
-        var password = self.passwordField.text
-        var email = self.emailField.text
-        var finalEmail = email?.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+        let username = self.usernameField.text
+        let password = self.passwordField.text
+        let email = self.emailField.text
+        let finalEmail = email?.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
         
         // Validate the text fields
         if username!.characters.count < 5 {
@@ -71,14 +71,15 @@ class SignupViewController: UIViewController {
                     var alert = UIAlertView(title: "Success", message: "Signed Up", delegate: self, cancelButtonTitle: "OK")
                     alert.show()
                     dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                        let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("Home") as! UIViewController
+                        let viewController:UITabBarController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("Root") as! UITabBarController
                         self.presentViewController(viewController, animated: true, completion: nil)
                     })
                 }
             })
         }
     }
-    
+
+
     
 
 }
