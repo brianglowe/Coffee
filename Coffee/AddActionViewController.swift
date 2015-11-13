@@ -21,9 +21,10 @@ class AddActionViewController: UIViewController {
     @IBOutlet weak var saveAndCloseButton: UIButton!
     
     
+    @IBOutlet weak var commentField: UITextField!
     @IBOutlet weak var addtCommentsLabel: UILabel!
     
-    @IBOutlet weak var commentField: UITextView!
+
     
     var leadForAction = PFObject?()
     
@@ -57,7 +58,7 @@ class AddActionViewController: UIViewController {
     
     func createActivity(action: String) {
         let activity = PFObject(className: "Activity")
-        activity.setObject(commentField.text, forKey: "comments")
+        activity.setObject(commentField.text!, forKey: "comments")
         activity.setObject(action, forKey: "type")
         activity.setObject((leadForAction?.objectId)!, forKey: "assignedLead")
 
