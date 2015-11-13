@@ -16,11 +16,14 @@ class EditLeadViewController: UIViewController {
     @IBOutlet weak var leadPhoneField: UITextField!
     @IBOutlet weak var leadEmailField: UITextField!
     @IBOutlet weak var leadRatingField: UITextField!
-    @IBOutlet weak var leadStatusLabel: UILabel!
+  //  @IBOutlet weak var leadStatusLabel: UILabel!
+    
+    @IBOutlet weak var updateLeadButton: UIButton!
+    @IBOutlet weak var saveLeadButton: UIButton!
     
     var leadToEdit = PFObject?() // comes from LeadDetailVC
     
-   var updatedLead = PFObject?()
+    var updatedLead = PFObject?()
     
 //    var updatedLead: PFObject? {
 //        didSet {
@@ -30,6 +33,8 @@ class EditLeadViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        saveLeadButton.hidden = true
         
         showLeadDetails()
     }
@@ -45,7 +50,7 @@ class EditLeadViewController: UIViewController {
         leadPhoneField.text = leadToEdit?.objectForKey("leadPhone") as? String
         leadEmailField.text = leadToEdit?.objectForKey("leadContactEmail") as? String
         leadRatingField.text = leadToEdit?.objectForKey("leadRating") as? String
-        leadStatusLabel.text = leadToEdit?.objectForKey("status") as? String
+  //      leadStatusLabel.text = leadToEdit?.objectForKey("status") as? String
     }
     
     func updateLeadDetails() {
@@ -57,6 +62,8 @@ class EditLeadViewController: UIViewController {
         
         leadToEdit!.saveInBackgroundWithBlock{ succeeded, error in
             if succeeded {
+                self.saveLeadButton.hidden = false
+                self.updateLeadButton.hidden = true
                 print("this will print from saveinBackground closure")
             } else {
                 if let errorMessage = error?.userInfo["error"] as? String {
