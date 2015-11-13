@@ -64,7 +64,7 @@ class AddActionViewController: UIViewController {
 
         activity.saveEventually {(success, error) -> Void in
             if (error == nil) {
-                
+                self.submitButton.hidden = true
             } else {
                 print(error?.userInfo)
             }

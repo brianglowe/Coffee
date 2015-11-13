@@ -14,6 +14,7 @@ class UpdateStatusViewController: UIViewController {
     @IBOutlet weak var winButton: UIButton!
     @IBOutlet weak var lostButton: UIButton!
     @IBOutlet weak var closeButton: UIButton!
+    @IBOutlet weak var submitButton: UIButton!
     
     @IBOutlet weak var leadNameLabel: UILabel!
     @IBOutlet weak var addtCommentsLabel: UILabel!
@@ -46,9 +47,9 @@ class UpdateStatusViewController: UIViewController {
     
     func initiateView() {
         presentLeadName()
-        commentField.hidden = true
         addtCommentsLabel.hidden = true
         commentField.hidden = true
+        submitButton.hidden = true
         closeButton.hidden = true
     }
     
@@ -57,10 +58,12 @@ class UpdateStatusViewController: UIViewController {
         if self.status == "win" {
             addtCommentsLabel.hidden = false
             commentField.hidden = false
+            submitButton.hidden = false
             lostButton.hidden = true
         } else {
             addtCommentsLabel.hidden = false
             commentField.hidden = false
+            submitButton.hidden = false
             winButton.hidden = true
         }
     }
@@ -87,6 +90,7 @@ class UpdateStatusViewController: UIViewController {
         update.setObject((leadToUpdate?.objectId)!, forKey: "assignedLead")
         update.saveEventually {(success, error) -> Void in
             if (error == nil) {
+                self.submitButton.hidden = true
                 self.closeButton.hidden = false
             } else {
                 print(error?.userInfo)

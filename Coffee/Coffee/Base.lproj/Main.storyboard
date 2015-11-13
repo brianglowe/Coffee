@@ -525,7 +525,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recent Activities" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mPo-7G-INK">
-                                <rect key="frame" x="20" y="304.5" width="127.5" height="20.5"/>
+                                <rect key="frame" x="20" y="302.5" width="127.5" height="20.5"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -619,7 +619,7 @@
                             <constraint firstItem="JxC-s0-7Sc" firstAttribute="leading" secondItem="tX8-u4-gT3" secondAttribute="leading" id="XG5-X3-YlJ"/>
                             <constraint firstItem="BzN-QI-wSv" firstAttribute="top" secondItem="Zvg-4V-ljj" secondAttribute="bottom" constant="14.5" id="XSr-g4-IQj"/>
                             <constraint firstItem="mPo-7G-INK" firstAttribute="leading" secondItem="tX8-u4-gT3" secondAttribute="leadingMargin" id="Xls-fU-9sA"/>
-                            <constraint firstItem="JxC-s0-7Sc" firstAttribute="top" secondItem="mPo-7G-INK" secondAttribute="bottom" constant="8" id="afu-f6-DVj"/>
+                            <constraint firstItem="JxC-s0-7Sc" firstAttribute="top" secondItem="mPo-7G-INK" secondAttribute="bottom" constant="10" id="afu-f6-DVj"/>
                             <constraint firstItem="JxC-s0-7Sc" firstAttribute="leading" secondItem="tX8-u4-gT3" secondAttribute="leading" id="b9R-4g-Vvj"/>
                             <constraint firstItem="Jaa-g2-wDF" firstAttribute="trailing" secondItem="tX8-u4-gT3" secondAttribute="trailingMargin" id="cLt-sw-eQV"/>
                             <constraint firstItem="Zvg-4V-ljj" firstAttribute="leading" secondItem="tX8-u4-gT3" secondAttribute="leadingMargin" id="cgc-hr-u8t"/>
@@ -831,19 +831,19 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ujd-lT-8YH">
-                                <rect key="frame" x="273" y="462" width="54" height="32"/>
+                                <rect key="frame" x="251" y="462" width="98" height="32"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
-                                <state key="normal" title="Submit"/>
+                                <state key="normal" title="Save Activity"/>
                                 <connections>
                                     <action selector="submitButton:" destination="ePN-Vh-t8x" eventType="touchUpInside" id="Emg-MI-cQD"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PDm-qP-EhB">
-                                <rect key="frame" x="251.5" y="504" width="98" height="32"/>
+                                <rect key="frame" x="278.5" y="504" width="43" height="32"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
-                                <state key="normal" title="Save Activity"/>
+                                <state key="normal" title="Close"/>
                                 <connections>
                                     <segue destination="cba-Td-USL" kind="unwind" unwindAction="unwindWithUpdatedLead:" id="Klg-3P-YQv"/>
                                 </connections>
@@ -1130,6 +1130,7 @@
                         <outlet property="commentField" destination="N4E-U7-G1a" id="qtV-NI-I72"/>
                         <outlet property="leadNameLabel" destination="oEb-0e-7Uy" id="QhQ-bO-FLx"/>
                         <outlet property="lostButton" destination="XWF-aJ-q6a" id="KQh-Oh-r8n"/>
+                        <outlet property="submitButton" destination="8DS-OW-Yu5" id="0cw-Eh-8Bk"/>
                         <outlet property="winButton" destination="lsP-lf-cyN" id="nd2-uG-FPM"/>
                     </connections>
                 </viewController>
@@ -1181,10 +1182,10 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Slp-jv-XOb">
-                                <rect key="frame" x="245.5" y="443" width="110" height="34"/>
+                                <rect key="frame" x="276.5" y="443" width="48" height="34"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
-                                <state key="normal" title="Save &amp; Close">
+                                <state key="normal" title="Close">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
