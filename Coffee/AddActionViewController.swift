@@ -35,6 +35,9 @@ class AddActionViewController: UIViewController {
         
         print("leadForAction object at ViewDidLoad: \(leadForAction)")
         
+        
+        
+        
         commentField.hidden = true
         addtCommentsLabel.hidden = true
         submitButton.hidden = true
@@ -61,7 +64,9 @@ class AddActionViewController: UIViewController {
         activity.setObject(commentField.text!, forKey: "comments")
         activity.setObject(action, forKey: "type")
         activity.setObject((leadForAction?.objectId)!, forKey: "assignedLead")
-
+        
+  //      self.typeImage.image = self.imageForType((activity?.objectForKey("type") as? String)!)
+        
         activity.saveEventually {(success, error) -> Void in
             if (error == nil) {
                 self.submitButton.hidden = true
@@ -90,7 +95,7 @@ class AddActionViewController: UIViewController {
     
     
     @IBAction func voicemailButton(sender: AnyObject) {
-       actionType = "lvm"
+       actionType = "call"
         commentField.hidden = false
         addtCommentsLabel.hidden = false
         submitButton.hidden = false
@@ -113,7 +118,7 @@ class AddActionViewController: UIViewController {
     }
 
     @IBAction func pushApptButton(sender: UIButton) {
-        actionType = "Appointment"
+        actionType = "appt"
         commentField.hidden = false
         addtCommentsLabel.hidden = false
         submitButton.hidden = false
@@ -126,6 +131,13 @@ class AddActionViewController: UIViewController {
     @IBAction func submitButton(sender: UIButton) {
         createActivity(self.actionType!)
     }
+    
+    // MARK: assign the activity to specific image ** bad location
+    func imageForActivity(action:String) -> UIImage? {
+        let imageName = "\(action)1"
+        return UIImage(named: imageName)
+    }
+    
     
     
 }

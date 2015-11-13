@@ -21,7 +21,7 @@ class NewLeadViewController: UIViewController {
     
     //MARK: SwiftCop Fun
     
-    @IBOutlet weak var verifyMessage: UILabel!
+    @IBOutlet weak var nameVerifyMessage: UILabel!
     @IBOutlet weak var emailVerifyMessage: UILabel!
     
     let swiftCop = SwiftCop()
@@ -30,7 +30,11 @@ class NewLeadViewController: UIViewController {
         super.viewDidLoad()
         
         // trying out swiftcop
+        swiftCop.addSuspect(Suspect(view: self.leadNameField, sentence: "Full name please"){
+            return $0.componentsSeparatedByString(" ").filter{$0 != ""}.count >= 2
+            })
         swiftCop.addSuspect(Suspect(view:self.leadEmailField, sentence: "Invalid email", trial: Trial.Email))
+        
 
     }
 
@@ -75,6 +79,11 @@ class NewLeadViewController: UIViewController {
     @IBAction func validateEmail(sender: UITextField) {
         self.emailVerifyMessage.text = swiftCop.isGuilty(sender)?.verdict()
     }
+    @IBAction func validateFullName(sender: UITextField) {
+        self.nameVerifyMessage.text = swiftCop.isGuilty(sender)?.verdict()
+    }
+    
+    
     
     @IBAction func submitPressed(sender: AnyObject) {
         saveLead()
@@ -82,6 +91,7 @@ class NewLeadViewController: UIViewController {
     }
 
 
+    
     
 }
 
