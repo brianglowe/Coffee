@@ -123,7 +123,6 @@ class AddActionViewController: UIViewController {
         notesButton.hidden = true
     }
     
-    
     @IBAction func submitButton(sender: UIButton) {
         createActivity(self.actionType!)
     }

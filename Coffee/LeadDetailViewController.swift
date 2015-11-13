@@ -19,7 +19,6 @@ class LeadDetailViewController: UIViewController, UITableViewDataSource, UITable
     @IBOutlet weak var leadCompanyLabel: UILabel!
     @IBOutlet weak var leadPhoneLabel: UILabel!
     @IBOutlet weak var leadRatingLabel: UILabel!
-//    @IBOutlet weak var leadCommentsLabel: UILabel!
     @IBOutlet weak var leadStatusLabel: UILabel!
     @IBOutlet weak var ratingImage: UIImageView!
     
@@ -64,9 +63,6 @@ class LeadDetailViewController: UIViewController, UITableViewDataSource, UITable
         
         return cell
     }
-    
-
-    
     
     // Mark: load lead record's activities
     func loadActivities() {
