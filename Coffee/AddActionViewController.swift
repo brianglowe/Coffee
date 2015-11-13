@@ -15,10 +15,14 @@ class AddActionViewController: UIViewController {
     @IBOutlet weak var emailButton: UIButton!
     @IBOutlet weak var voicemailButton: UIButton!
     @IBOutlet weak var notesButton: UIButton!
+    @IBOutlet weak var apptButton: UIButton!
+    
     @IBOutlet weak var submitButton: UIButton!
     @IBOutlet weak var saveAndCloseButton: UIButton!
     
+    
     @IBOutlet weak var addtCommentsLabel: UILabel!
+    
     @IBOutlet weak var commentField: UITextView!
     
     var leadForAction = PFObject?()
@@ -80,6 +84,7 @@ class AddActionViewController: UIViewController {
         
         voicemailButton.hidden = true
         notesButton.hidden = true
+        apptButton.hidden = true
     }
     
     
@@ -91,6 +96,7 @@ class AddActionViewController: UIViewController {
         
         emailButton.hidden = true
         notesButton.hidden = true
+        apptButton.hidden = true
     }
     
     
@@ -102,8 +108,21 @@ class AddActionViewController: UIViewController {
         
         emailButton.hidden = true
         voicemailButton.hidden = true
+        apptButton.hidden = true
     }
 
+    @IBAction func pushApptButton(sender: UIButton) {
+        actionType = "Appointment"
+        commentField.hidden = false
+        addtCommentsLabel.hidden = false
+        submitButton.hidden = false
+        
+        emailButton.hidden = true
+        voicemailButton.hidden = true
+        notesButton.hidden = true
+    }
+    
+    
     @IBAction func submitButton(sender: UIButton) {
         createActivity(self.actionType!)
     }

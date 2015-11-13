@@ -804,7 +804,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" text="Add your comments here..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Eui-Nj-Mae">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" text="Add your comments here..." translatesAutoresizingMaskIntoConstraints="NO" id="Eui-Nj-Mae">
                                 <rect key="frame" x="20" y="236" width="560" height="128"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.1764705882" green="0.1843137255" blue="0.20000000000000001" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
@@ -814,59 +814,54 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Any Additional Comments?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xO3-ug-MD0">
-                                <rect key="frame" x="20" y="211" width="174" height="17"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" red="0.3208007812" green="0.31789679279999999" blue="0.95219983549999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4H1-Mc-P3A">
-                                <rect key="frame" x="249" y="95" width="102" height="87"/>
+                                <rect key="frame" x="195" y="84" width="100" height="100"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="102" id="acV-kv-gm6"/>
-                                    <constraint firstAttribute="height" constant="87" id="j5p-BA-3cf"/>
+                                    <constraint firstAttribute="height" constant="100" id="23A-74-77Y"/>
+                                    <constraint firstAttribute="width" constant="100" id="AdR-3V-Qu5"/>
                                 </constraints>
-                                <state key="normal" title="LVM"/>
+                                <state key="normal" title="Call"/>
                                 <connections>
                                     <action selector="voicemailButton:" destination="ePN-Vh-t8x" eventType="touchUpInside" id="uQI-Uv-C5Z"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D3X-0u-9JM">
-                                <rect key="frame" x="379" y="95" width="102" height="87"/>
+                                <rect key="frame" x="305" y="84" width="100" height="100"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.86536287010000001" green="0.34914679279999999" blue="0.1577919408" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="102" id="V47-wE-msj"/>
-                                    <constraint firstAttribute="height" constant="87" id="v8D-Cr-MCl"/>
+                                    <constraint firstAttribute="width" constant="100" id="YwK-fZ-sKS"/>
+                                    <constraint firstAttribute="height" constant="100" id="rTP-En-p2O"/>
                                 </constraints>
                                 <state key="normal" title="Notes"/>
                                 <connections>
                                     <action selector="notesButton:" destination="ePN-Vh-t8x" eventType="touchUpInside" id="75B-Oc-oRM"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ujd-lT-8YH">
-                                <rect key="frame" x="71" y="485" width="49" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ujd-lT-8YH">
+                                <rect key="frame" x="273" y="374" width="54" height="32"/>
                                 <animations/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                 <state key="normal" title="Submit"/>
                                 <connections>
                                     <action selector="submitButton:" destination="ePN-Vh-t8x" eventType="touchUpInside" id="Emg-MI-cQD"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PDm-qP-EhB">
-                                <rect key="frame" x="249" y="485" width="91" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PDm-qP-EhB">
+                                <rect key="frame" x="251" y="421" width="99" height="32"/>
                                 <animations/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                 <state key="normal" title="Save &amp; Close"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FiB-rb-MOv">
-                                <rect key="frame" x="117" y="95" width="102" height="87"/>
+                                <rect key="frame" x="87" y="84" width="100" height="100"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.37854646380000001" green="0.5" blue="0.95027240950000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="87" id="3S3-KA-3ux"/>
-                                    <constraint firstAttribute="width" constant="102" id="5S1-1V-hVa"/>
+                                    <constraint firstAttribute="height" constant="100" id="B9y-ef-jYs"/>
+                                    <constraint firstAttribute="width" constant="100" id="X8Z-og-ccO"/>
                                 </constraints>
                                 <state key="normal" title="Email">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -875,28 +870,74 @@
                                     <action selector="emailButton:" destination="ePN-Vh-t8x" eventType="touchUpInside" id="jeh-Nt-8LF"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yVo-c0-zPb">
+                                <rect key="frame" x="415" y="84" width="100" height="100"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.37854646380000001" green="0.83380448190000001" blue="0.0058336760340000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Ddj-Yk-oBp"/>
+                                    <constraint firstAttribute="height" constant="100" id="iv9-Gt-NRR"/>
+                                </constraints>
+                                <state key="normal" title="Appointment"/>
+                                <connections>
+                                    <action selector="pushApptButton:" destination="ePN-Vh-t8x" eventType="touchUpInside" id="dqH-63-rgl"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Any Additional Comments?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xO3-ug-MD0">
+                                <rect key="frame" x="20" y="204.5" width="211.5" height="21.5"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
+                                <color key="textColor" red="0.1764705882" green="0.1843137255" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="yVo-c0-zPb" firstAttribute="leading" secondItem="D3X-0u-9JM" secondAttribute="trailing" constant="10" id="1Lz-ce-koe"/>
                             <constraint firstItem="4H1-Mc-P3A" firstAttribute="leading" secondItem="FiB-rb-MOv" secondAttribute="trailing" constant="30" id="22p-VY-F4L"/>
+                            <constraint firstItem="FiB-rb-MOv" firstAttribute="top" secondItem="BiV-Rs-oZZ" secondAttribute="bottom" constant="20" id="2us-YV-gZf"/>
                             <constraint firstItem="D3X-0u-9JM" firstAttribute="top" secondItem="BiV-Rs-oZZ" secondAttribute="bottom" constant="31" id="AJJ-kt-iCj"/>
                             <constraint firstItem="D3X-0u-9JM" firstAttribute="centerY" secondItem="FiB-rb-MOv" secondAttribute="centerY" id="Av7-4V-moJ"/>
+                            <constraint firstItem="ujd-lT-8YH" firstAttribute="centerX" secondItem="nrh-je-R2P" secondAttribute="centerX" id="Bgj-0C-BDh"/>
+                            <constraint firstItem="4H1-Mc-P3A" firstAttribute="top" secondItem="BiV-Rs-oZZ" secondAttribute="bottom" constant="20" id="EVP-D6-EXS"/>
+                            <constraint firstItem="ujd-lT-8YH" firstAttribute="top" secondItem="Eui-Nj-Mae" secondAttribute="bottom" constant="10" id="GwP-s6-Otl"/>
+                            <constraint firstItem="D3X-0u-9JM" firstAttribute="top" secondItem="BiV-Rs-oZZ" secondAttribute="bottom" constant="20" id="LXY-BS-rSt"/>
                             <constraint firstItem="FiB-rb-MOv" firstAttribute="top" secondItem="BiV-Rs-oZZ" secondAttribute="bottom" constant="31" id="NJc-BC-FZ1"/>
-                            <constraint firstItem="Eui-Nj-Mae" firstAttribute="top" secondItem="xO3-ug-MD0" secondAttribute="bottom" constant="8" id="R9D-OL-6xo"/>
+                            <constraint firstItem="D3X-0u-9JM" firstAttribute="centerX" secondItem="nrh-je-R2P" secondAttribute="centerX" constant="55" id="Qst-dQ-ow3"/>
+                            <constraint firstItem="Eui-Nj-Mae" firstAttribute="top" secondItem="xO3-ug-MD0" secondAttribute="bottom" constant="10" id="R9D-OL-6xo"/>
                             <constraint firstItem="Eui-Nj-Mae" firstAttribute="centerY" secondItem="nrh-je-R2P" secondAttribute="centerY" id="RFy-EX-IzE"/>
                             <constraint firstItem="Eui-Nj-Mae" firstAttribute="centerX" secondItem="nrh-je-R2P" secondAttribute="centerX" id="RIP-8z-g50"/>
+                            <constraint firstItem="4H1-Mc-P3A" firstAttribute="leading" secondItem="FiB-rb-MOv" secondAttribute="trailing" constant="8" id="W2m-HV-vUI"/>
                             <constraint firstItem="Eui-Nj-Mae" firstAttribute="trailing" secondItem="nrh-je-R2P" secondAttribute="trailingMargin" id="aof-Iu-iIW"/>
+                            <constraint firstItem="PDm-qP-EhB" firstAttribute="centerX" secondItem="nrh-je-R2P" secondAttribute="centerX" id="bHJ-Jz-FWR"/>
+                            <constraint firstItem="4H1-Mc-P3A" firstAttribute="centerX" secondItem="nrh-je-R2P" secondAttribute="centerX" constant="-55" id="cVn-xo-X9S"/>
                             <constraint firstItem="4H1-Mc-P3A" firstAttribute="centerX" secondItem="nrh-je-R2P" secondAttribute="centerX" id="eEm-82-1iC"/>
                             <constraint firstItem="4H1-Mc-P3A" firstAttribute="top" secondItem="BiV-Rs-oZZ" secondAttribute="bottom" constant="31" id="gjI-JD-JQ5"/>
+                            <constraint firstItem="PDm-qP-EhB" firstAttribute="top" secondItem="ujd-lT-8YH" secondAttribute="bottom" constant="15" id="jSK-6a-MBZ"/>
+                            <constraint firstItem="FiB-rb-MOv" firstAttribute="centerX" secondItem="nrh-je-R2P" secondAttribute="centerX" constant="-163" id="oOz-YK-Md3"/>
                             <constraint firstAttribute="leadingMargin" secondItem="xO3-ug-MD0" secondAttribute="leading" id="qOp-wm-wI2"/>
                             <constraint firstItem="Eui-Nj-Mae" firstAttribute="leading" secondItem="nrh-je-R2P" secondAttribute="leadingMargin" id="rav-Yw-eoq"/>
                             <constraint firstItem="D3X-0u-9JM" firstAttribute="leading" secondItem="4H1-Mc-P3A" secondAttribute="trailing" constant="28" id="ton-L1-wJf"/>
+                            <constraint firstItem="yVo-c0-zPb" firstAttribute="top" secondItem="BiV-Rs-oZZ" secondAttribute="bottom" constant="20" id="vbA-Vj-fmY"/>
                             <constraint firstItem="4H1-Mc-P3A" firstAttribute="centerY" secondItem="FiB-rb-MOv" secondAttribute="centerY" id="y8d-Uo-v8D"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="NJc-BC-FZ1"/>
+                                <exclude reference="22p-VY-F4L"/>
+                                <exclude reference="eEm-82-1iC"/>
+                                <exclude reference="gjI-JD-JQ5"/>
+                                <exclude reference="y8d-Uo-v8D"/>
+                                <exclude reference="AJJ-kt-iCj"/>
+                                <exclude reference="Av7-4V-moJ"/>
+                                <exclude reference="ton-L1-wJf"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="addtCommentsLabel" destination="xO3-ug-MD0" id="Og0-Ry-rlN"/>
+                        <outlet property="apptButton" destination="yVo-c0-zPb" id="Jhg-fh-GtK"/>
                         <outlet property="commentField" destination="Eui-Nj-Mae" id="qYW-yA-u2j"/>
                         <outlet property="emailButton" destination="FiB-rb-MOv" id="K3m-xZ-IJh"/>
                         <outlet property="notesButton" destination="D3X-0u-9JM" id="HYg-T9-WKZ"/>
