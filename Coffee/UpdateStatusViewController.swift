@@ -11,7 +11,6 @@ import Parse
 
 class UpdateStatusViewController: UIViewController {
 
-    @IBOutlet weak var pendingButton: UIButton!
     @IBOutlet weak var winButton: UIButton!
     @IBOutlet weak var lostButton: UIButton!
     @IBOutlet weak var closeButton: UIButton!
@@ -47,7 +46,6 @@ class UpdateStatusViewController: UIViewController {
     
     func initiateView() {
         presentLeadName()
-        pendingButton.hidden = true
         commentField.hidden = true
         addtCommentsLabel.hidden = true
         commentField.hidden = true
@@ -98,10 +96,7 @@ class UpdateStatusViewController: UIViewController {
         
     }
 
-    // MARK: button methods
-    @IBAction func pushPendingButton(sender: AnyObject) {
-    }
-    
+    // MARK: button methods    
     @IBAction func pushWinButton(sender: AnyObject) {
         self.status = "win"
         showCommentInput()
