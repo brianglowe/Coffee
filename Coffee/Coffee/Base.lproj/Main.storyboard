@@ -291,7 +291,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sVl-Pv-sIU">
-                                <rect key="frame" x="200" y="74" width="200" height="20"/>
+                                <rect key="frame" x="200" y="73" width="200" height="20.5"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="c31-cl-slQ"/>
@@ -301,17 +301,38 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LCl-uO-UWO">
-                                <rect key="frame" x="242" y="28" width="117" height="33"/>
+                                <rect key="frame" x="242" y="28" width="117.5" height="32.5"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <color key="textColor" red="0.1764705882" green="0.18726911199999999" blue="0.25021587169999998" alpha="0.88458086989999996" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recently closed leads:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u6o-oC-Mqn">
-                                <rect key="frame" x="232" y="113" width="136" height="16"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recent leads you won:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="26U-KS-LhU">
+                                <rect key="frame" x="211.5" y="118" width="177.5" height="21.5"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
+                                <color key="textColor" red="0.1764705882" green="0.1843137255" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Close Rate:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2lo-ap-qev">
+                                <rect key="frame" x="255" y="306" width="90.5" height="21.5"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
+                                <color key="textColor" red="0.1764705882" green="0.1843137255" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Average age of lead:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k4n-T1-pgU">
+                                <rect key="frame" x="220.5" y="396.5" width="159" height="21.5"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
+                                <color key="textColor" red="0.1764705882" green="0.1843137255" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recently closed leads:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u6o-oC-Mqn">
+                                <rect key="frame" x="213" y="214" width="174" height="21.5"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
+                                <color key="textColor" red="0.1764705882" green="0.1843137255" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -321,10 +342,16 @@
                             <constraint firstItem="Gvj-if-IHe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="29r-7F-asp"/>
                             <constraint firstItem="sVl-Pv-sIU" firstAttribute="top" secondItem="LCl-uO-UWO" secondAttribute="bottom" constant="13" id="4kM-np-3pD"/>
                             <constraint firstItem="LCl-uO-UWO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4xu-wO-VbM"/>
+                            <constraint firstItem="k4n-T1-pgU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8PI-7J-2D8"/>
+                            <constraint firstItem="2lo-ap-qev" firstAttribute="top" secondItem="u6o-oC-Mqn" secondAttribute="bottom" constant="70.5" id="FEO-fv-9Dj"/>
                             <constraint firstItem="u6o-oC-Mqn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IIs-pa-qtF"/>
-                            <constraint firstItem="u6o-oC-Mqn" firstAttribute="top" secondItem="sVl-Pv-sIU" secondAttribute="bottom" constant="19" id="baD-4Q-UHn"/>
+                            <constraint firstItem="2lo-ap-qev" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Qr4-zd-Nei"/>
+                            <constraint firstItem="26U-KS-LhU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aNM-Mh-8T9"/>
+                            <constraint firstItem="k4n-T1-pgU" firstAttribute="top" secondItem="2lo-ap-qev" secondAttribute="bottom" constant="69" id="bD0-iY-LZf"/>
+                            <constraint firstItem="u6o-oC-Mqn" firstAttribute="top" secondItem="sVl-Pv-sIU" secondAttribute="bottom" constant="120.5" id="baD-4Q-UHn"/>
                             <constraint firstItem="sVl-Pv-sIU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oyM-TE-ATa"/>
                             <constraint firstItem="LCl-uO-UWO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="qff-bt-JJP"/>
+                            <constraint firstItem="26U-KS-LhU" firstAttribute="top" secondItem="sVl-Pv-sIU" secondAttribute="bottom" constant="24.5" id="wx2-6w-Z2Y"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Gvj-if-IHe" secondAttribute="bottom" constant="20" id="wzd-Z5-1Yc"/>
                         </constraints>
                     </view>
@@ -430,7 +457,7 @@
         <scene sceneID="avZ-vd-H67">
             <objects>
                 <navigationController id="Fce-Ve-rp2" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Open Leads" id="BZH-ME-sDf"/>
+                    <tabBarItem key="tabBarItem" title="Open Leads" selectedImage="hotcoffee" id="BZH-ME-sDf"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="gEW-rz-1MP">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -683,15 +710,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aET-SW-izF">
-                                <rect key="frame" x="279" y="494" width="43" height="32"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
-                                <state key="normal" title="Close"/>
-                                <connections>
-                                    <action selector="pushCloseButton:" destination="VXG-uK-5C6" eventType="touchUpInside" id="BAn-IO-ij2"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lKc-UU-GHg">
                                 <rect key="frame" x="225" y="72" width="150" height="150"/>
                                 <animations/>
@@ -756,6 +774,12 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aET-SW-izF">
+                                <rect key="frame" x="279" y="494" width="43" height="32"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <state key="normal" title="Close"/>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -797,6 +821,7 @@
                     <connections>
                         <outlet property="activityCommentLabel" destination="RmN-bM-Jw9" id="h6X-5q-Are"/>
                         <outlet property="activityTypeLabel" destination="ZQH-av-MnA" id="4fD-Ef-jIG"/>
+                        <outlet property="closeButton" destination="aET-SW-izF" id="U8M-or-MzS"/>
                         <outlet property="leadNameLabel" destination="3vc-8a-k6h" id="hz2-Fg-sap"/>
                         <outlet property="typeImage" destination="lKc-UU-GHg" id="FTJ-vd-YOq"/>
                     </connections>
@@ -1563,4 +1588,7 @@
             <point key="canvasLocation" x="706" y="-350"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="hotcoffee" width="128" height="128"/>
+    </resources>
 </document>

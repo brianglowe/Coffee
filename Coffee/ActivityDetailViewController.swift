@@ -17,6 +17,7 @@ class ActivityDetailViewController: UIViewController {
     
     @IBOutlet weak var typeImage: UIImageView!
     
+    @IBOutlet weak var closeButton: UIButton!
     
     var lead = PFObject?()
     var activity = PFObject?()
@@ -24,7 +25,7 @@ class ActivityDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        closeButton.hidden = true
         
         print("printing the activity date created: \(self.activity?.objectForKey("createdAt"))")
         
@@ -46,9 +47,9 @@ class ActivityDetailViewController: UIViewController {
         activityCommentLabel.text = self.activity?.objectForKey("comments") as? String
     }
     
-    @IBAction func pushCloseButton(sender: AnyObject) {
-        self.navigationController?.popToRootViewControllerAnimated(true)
-    }
+//    @IBAction func pushCloseButton(sender: AnyObject) {
+//        self.navigationController?.popToRootViewControllerAnimated(true)
+//    }
     
     // MARK: assign the rating to specific image ** bad location
     func imageForType(type:String) -> UIImage? {

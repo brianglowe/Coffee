@@ -34,6 +34,7 @@ class LeadDetailViewController: UIViewController, UITableViewDataSource, UITable
 
         loadLead()
         loadActivities()
+        activityTable.reloadData()
         
     print("this is the detailed lead: \(detailedLead)")
     }
@@ -41,6 +42,7 @@ class LeadDetailViewController: UIViewController, UITableViewDataSource, UITable
     override func viewWillAppear(animated: Bool) {
         loadLead()
         loadActivities()
+        activityTable.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
