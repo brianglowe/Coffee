@@ -805,7 +805,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4H1-Mc-P3A">
-                                <rect key="frame" x="195" y="194" width="100" height="100"/>
+                                <rect key="frame" x="195" y="214" width="100" height="100"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -818,7 +818,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D3X-0u-9JM">
-                                <rect key="frame" x="305" y="84" width="100" height="100"/>
+                                <rect key="frame" x="305" y="104" width="100" height="100"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.86536287010000001" green="0.34914679279999999" blue="0.1577919408" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -846,7 +846,7 @@
                                 <state key="normal" title="Save &amp; Close"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FiB-rb-MOv">
-                                <rect key="frame" x="195" y="84" width="100" height="100"/>
+                                <rect key="frame" x="195" y="104" width="100" height="100"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.37854646380000001" green="0.5" blue="0.95027240950000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -858,6 +858,19 @@
                                 </state>
                                 <connections>
                                     <action selector="emailButton:" destination="ePN-Vh-t8x" eventType="touchUpInside" id="jeh-Nt-8LF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yVo-c0-zPb">
+                                <rect key="frame" x="305" y="214" width="100" height="100"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.37854646380000001" green="0.83380448190000001" blue="0.0058336760340000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Ddj-Yk-oBp"/>
+                                    <constraint firstAttribute="height" constant="100" id="iv9-Gt-NRR"/>
+                                </constraints>
+                                <state key="normal" title="Appointment"/>
+                                <connections>
+                                    <action selector="pushApptButton:" destination="ePN-Vh-t8x" eventType="touchUpInside" id="dqH-63-rgl"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Any Additional Comments?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xO3-ug-MD0">
@@ -877,19 +890,13 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yVo-c0-zPb">
-                                <rect key="frame" x="305" y="194" width="100" height="100"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select an activity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ugz-fB-5ix">
+                                <rect key="frame" x="229" y="72" width="142" height="21.5"/>
                                 <animations/>
-                                <color key="backgroundColor" red="0.37854646380000001" green="0.83380448190000001" blue="0.0058336760340000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="Ddj-Yk-oBp"/>
-                                    <constraint firstAttribute="height" constant="100" id="iv9-Gt-NRR"/>
-                                </constraints>
-                                <state key="normal" title="Appointment"/>
-                                <connections>
-                                    <action selector="pushApptButton:" destination="ePN-Vh-t8x" eventType="touchUpInside" id="dqH-63-rgl"/>
-                                </connections>
-                            </button>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -899,7 +906,7 @@
                             <constraint firstItem="4H1-Mc-P3A" firstAttribute="leading" secondItem="FiB-rb-MOv" secondAttribute="trailing" constant="30" id="22p-VY-F4L"/>
                             <constraint firstItem="PDm-qP-EhB" firstAttribute="top" secondItem="ujd-lT-8YH" secondAttribute="bottom" constant="10" id="2aa-xm-g8d"/>
                             <constraint firstItem="ea3-P7-ugc" firstAttribute="trailing" secondItem="nrh-je-R2P" secondAttribute="trailingMargin" id="2ks-H3-erU"/>
-                            <constraint firstItem="FiB-rb-MOv" firstAttribute="top" secondItem="BiV-Rs-oZZ" secondAttribute="bottom" constant="20" id="2us-YV-gZf"/>
+                            <constraint firstItem="FiB-rb-MOv" firstAttribute="top" secondItem="BiV-Rs-oZZ" secondAttribute="bottom" constant="40" id="2us-YV-gZf"/>
                             <constraint firstItem="D3X-0u-9JM" firstAttribute="top" secondItem="BiV-Rs-oZZ" secondAttribute="bottom" constant="31" id="AJJ-kt-iCj"/>
                             <constraint firstItem="D3X-0u-9JM" firstAttribute="centerY" secondItem="FiB-rb-MOv" secondAttribute="centerY" id="Av7-4V-moJ"/>
                             <constraint firstItem="ujd-lT-8YH" firstAttribute="centerX" secondItem="nrh-je-R2P" secondAttribute="centerX" id="Bgj-0C-BDh"/>
@@ -908,13 +915,14 @@
                             <constraint firstItem="XYM-Qz-1g5" firstAttribute="top" secondItem="PDm-qP-EhB" secondAttribute="bottom" constant="15" id="F4h-hl-Cfq"/>
                             <constraint firstItem="ea3-P7-ugc" firstAttribute="centerY" secondItem="nrh-je-R2P" secondAttribute="centerY" id="JrJ-Bf-DM9"/>
                             <constraint firstItem="ea3-P7-ugc" firstAttribute="leading" secondItem="nrh-je-R2P" secondAttribute="leadingMargin" id="Kjf-69-7aF"/>
-                            <constraint firstItem="D3X-0u-9JM" firstAttribute="top" secondItem="BiV-Rs-oZZ" secondAttribute="bottom" constant="20" id="LXY-BS-rSt"/>
+                            <constraint firstItem="D3X-0u-9JM" firstAttribute="top" secondItem="BiV-Rs-oZZ" secondAttribute="bottom" constant="40" id="LXY-BS-rSt"/>
                             <constraint firstItem="FiB-rb-MOv" firstAttribute="top" secondItem="BiV-Rs-oZZ" secondAttribute="bottom" constant="31" id="NJc-BC-FZ1"/>
                             <constraint firstItem="D3X-0u-9JM" firstAttribute="centerX" secondItem="nrh-je-R2P" secondAttribute="centerX" constant="55" id="Qst-dQ-ow3"/>
                             <constraint firstItem="ea3-P7-ugc" firstAttribute="leading" secondItem="nrh-je-R2P" secondAttribute="leadingMargin" id="RYu-qR-8G1"/>
                             <constraint firstItem="ea3-P7-ugc" firstAttribute="top" secondItem="xO3-ug-MD0" secondAttribute="bottom" constant="10" id="RuN-yM-qVr"/>
                             <constraint firstItem="ea3-P7-ugc" firstAttribute="top" secondItem="xO3-ug-MD0" secondAttribute="bottom" constant="8" id="Uls-gO-7xj"/>
                             <constraint firstItem="4H1-Mc-P3A" firstAttribute="top" secondItem="FiB-rb-MOv" secondAttribute="bottom" constant="10" id="VOV-By-aGQ"/>
+                            <constraint firstItem="Ugz-fB-5ix" firstAttribute="top" secondItem="BiV-Rs-oZZ" secondAttribute="bottom" constant="8" id="Vht-k7-E93"/>
                             <constraint firstItem="4H1-Mc-P3A" firstAttribute="leading" secondItem="FiB-rb-MOv" secondAttribute="trailing" constant="-100" id="W2m-HV-vUI"/>
                             <constraint firstItem="yVo-c0-zPb" firstAttribute="centerX" secondItem="nrh-je-R2P" secondAttribute="centerX" constant="55" id="bDK-LF-cHz"/>
                             <constraint firstItem="PDm-qP-EhB" firstAttribute="centerX" secondItem="nrh-je-R2P" secondAttribute="centerX" id="bHJ-Jz-FWR"/>
@@ -927,6 +935,7 @@
                             <constraint firstAttribute="leadingMargin" secondItem="xO3-ug-MD0" secondAttribute="leading" id="qOp-wm-wI2"/>
                             <constraint firstItem="ujd-lT-8YH" firstAttribute="top" secondItem="ea3-P7-ugc" secondAttribute="bottom" constant="20" id="s9Q-z3-faY"/>
                             <constraint firstItem="D3X-0u-9JM" firstAttribute="leading" secondItem="4H1-Mc-P3A" secondAttribute="trailing" constant="28" id="ton-L1-wJf"/>
+                            <constraint firstItem="Ugz-fB-5ix" firstAttribute="centerX" secondItem="nrh-je-R2P" secondAttribute="centerX" id="u9Z-a8-a35"/>
                             <constraint firstItem="yVo-c0-zPb" firstAttribute="top" secondItem="BiV-Rs-oZZ" secondAttribute="bottom" constant="129" id="vbA-Vj-fmY"/>
                             <constraint firstItem="yVo-c0-zPb" firstAttribute="top" secondItem="D3X-0u-9JM" secondAttribute="bottom" constant="10" id="wce-qf-CKB"/>
                             <constraint firstItem="4H1-Mc-P3A" firstAttribute="centerY" secondItem="FiB-rb-MOv" secondAttribute="centerY" id="y8d-Uo-v8D"/>
