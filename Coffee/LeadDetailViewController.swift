@@ -19,8 +19,8 @@ class LeadDetailViewController: UIViewController, UITableViewDataSource, UITable
     @IBOutlet weak var leadCompanyLabel: UILabel!
     @IBOutlet weak var leadPhoneLabel: UILabel!
     @IBOutlet weak var leadRatingLabel: UILabel!
-    @IBOutlet weak var leadCommentsLabel: UILabel!
     @IBOutlet weak var leadStatusLabel: UILabel!
+    @IBOutlet weak var ratingImage: UIImageView!
     
     var detailedLead = PFObject?() // lead coming from ViewLeadsTB
     
@@ -34,6 +34,7 @@ class LeadDetailViewController: UIViewController, UITableViewDataSource, UITable
 
         loadLead()
         loadActivities()
+        activityTable.reloadData()
         
     print("this is the detailed lead: \(detailedLead)")
     }
@@ -41,6 +42,7 @@ class LeadDetailViewController: UIViewController, UITableViewDataSource, UITable
     override func viewWillAppear(animated: Bool) {
         loadLead()
         loadActivities()
+        activityTable.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -63,9 +65,6 @@ class LeadDetailViewController: UIViewController, UITableViewDataSource, UITable
         
         return cell
     }
-    
-
-    
     
     // Mark: load lead record's activities
     func loadActivities() {
@@ -99,11 +98,10 @@ class LeadDetailViewController: UIViewController, UITableViewDataSource, UITable
                     self.leadContactEmailLabel.text = object.objectForKey("leadContactEmail") as? String
                     self.leadCompanyLabel.text = object.objectForKey("leadCompany") as? String
                     self.leadPhoneLabel.text = object.objectForKey("leadPhone") as? String
-                    self.leadRatingLabel.text = object.objectForKey("leadRating") as? String
-                    self.leadCommentsLabel.text = object.objectForKey("leadComments") as? String
+                    self.leadRatingLabel.text = "This lead is \((object.objectForKey("leadRating") as? String)!)"
+  //                  self.leadCommentsLabel.text = object.objectForKey("leadComments") as? String
                     self.leadStatusLabel.text = object.objectForKey("status") as? String
-    print("the object from query: \(object)")
-    print("number of items in lead array: \(lead?.count)")
+                    self.ratingImage.image = self.imageForRating((object.objectForKey("leadRating") as? String)!)
                 }
             } else {
                 print(error)
@@ -156,8 +154,11 @@ class LeadDetailViewController: UIViewController, UITableViewDataSource, UITable
         print("this is the unwind segue print statement")
     }
 
-    
-    
+    // assign the rating to specific image ** SHould be in model class
+    func imageForRating(rating:String) -> UIImage? {
+        let imageName = "\(rating)coffee"
+        return UIImage(named: imageName)
+    }
     
     
 }

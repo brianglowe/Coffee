@@ -17,11 +17,25 @@ class NewLeadViewController: UIViewController {
     @IBOutlet weak var leadNumberField: UITextField!
     @IBOutlet weak var leadRatingField: UITextField!
     @IBOutlet weak var leadCommentsField: UITextField!
+    @IBOutlet weak var cancelButton: UIButton!
     
+    //MARK: SwiftCop Fun
+    
+    @IBOutlet weak var nameVerifyMessage: UILabel!
+    @IBOutlet weak var emailVerifyMessage: UILabel!
+    
+    let swiftCop = SwiftCop()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        // trying out swiftcop
+        swiftCop.addSuspect(Suspect(view: self.leadNameField, sentence: "Full name please"){
+            return $0.componentsSeparatedByString(" ").filter{$0 != ""}.count >= 2
+            })
+        swiftCop.addSuspect(Suspect(view:self.leadEmailField, sentence: "Invalid email", trial: Trial.Email))
+        
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -42,6 +56,7 @@ class NewLeadViewController: UIViewController {
         lead.setObject(PFUser.currentUser()!, forKey: "createdBy")
         lead.saveInBackgroundWithBlock{ succeeded, error in
             if succeeded {
+                
                 self.tabBarController?.popoverPresentationController
             } else {
                 if let errorMessage = error?.userInfo["error"] as? String {
@@ -61,12 +76,23 @@ class NewLeadViewController: UIViewController {
     }
     
     
+    @IBAction func validateEmail(sender: UITextField) {
+        self.emailVerifyMessage.text = swiftCop.isGuilty(sender)?.verdict()
+    }
+    @IBAction func validateFullName(sender: UITextField) {
+        self.nameVerifyMessage.text = swiftCop.isGuilty(sender)?.verdict()
+    }
+    
+    
     
     @IBAction func submitPressed(sender: AnyObject) {
         saveLead()
         clearFields()
     }
 
+
+    
+    
 }
 
 

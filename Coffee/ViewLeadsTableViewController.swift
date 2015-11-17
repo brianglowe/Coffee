@@ -44,11 +44,18 @@ class ViewLeadsTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell:UITableViewCell = tableView.dequeueReusableCellWithIdentifier("ViewLeadCell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("ViewLeadCell", forIndexPath: indexPath)
         let record:PFObject = self.leadRecordsFromQuery[indexPath.row] as PFObject
         
-        cell.detailTextLabel?.text = record.objectForKey("leadContactEmail") as? String
-        cell.textLabel?.text = record.objectForKey("leadName") as? String
+        if let nameLabel = cell.viewWithTag(100) as? UILabel {
+            nameLabel.text = record.objectForKey("leadName") as? String
+        }
+        if let companyLabel = cell.viewWithTag(101) as? UILabel {
+            companyLabel.text = record.objectForKey("leadCompany") as? String
+        }
+        if let ratingImageView = cell.viewWithTag(102) as? UIImageView {
+            ratingImageView.image = self.imageForRating((record.objectForKey("leadRating") as? String)!)
+        }
         
         return cell
     }
@@ -72,9 +79,13 @@ class ViewLeadsTableViewController: UITableViewController {
             }
     }}
     
-    
-    
-    
+    // assign the rating to specific image
+    func imageForRating(rating:String) -> UIImage? {
+        let imageName = "\(rating)coffee"
+        return UIImage(named: imageName)
+    }
+
+
     
 }
 
