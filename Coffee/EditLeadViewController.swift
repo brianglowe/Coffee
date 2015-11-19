@@ -48,6 +48,22 @@ class EditLeadViewController: UIViewController, UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    // remove keyboard upon tapping
+    func removeTextField(textField: UITextField) -> Bool {
+        
+        leadPhoneField.resignFirstResponder()
+        leadEmailField.resignFirstResponder()
+        leadRatingField.resignFirstResponder()
+        return true;
+    }
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        leadPhoneField.resignFirstResponder()
+        leadEmailField.resignFirstResponder()
+        leadRatingField.resignFirstResponder()
+        self.view.endEditing(true)
+    }
+    
     func showLeadDetails() {
         leadNameLabel.text = leadToEdit?.objectForKey("leadName") as? String
         leadCompanyLabel.text = leadToEdit?.objectForKey("leadCompany") as? String
