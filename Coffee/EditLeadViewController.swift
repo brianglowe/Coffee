@@ -9,7 +9,7 @@
 import UIKit
 import Parse
 
-class EditLeadViewController: UIViewController {
+class EditLeadViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var leadNameLabel: UILabel!
     @IBOutlet weak var leadCompanyLabel: UILabel!
@@ -33,6 +33,10 @@ class EditLeadViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        leadPhoneField.delegate = self
+        leadEmailField.delegate = self
+        leadRatingField.delegate = self
         
         saveLeadButton.hidden = true
         

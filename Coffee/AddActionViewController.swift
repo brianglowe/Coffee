@@ -9,7 +9,7 @@
 import UIKit
 import Parse
 
-class AddActionViewController: UIViewController {
+class AddActionViewController: UIViewController, UITextFieldDelegate {
 
     
     @IBOutlet weak var emailButton: UIButton!
@@ -35,7 +35,7 @@ class AddActionViewController: UIViewController {
         
         print("leadForAction object at ViewDidLoad: \(leadForAction)")
         
-        
+        commentField.delegate = self
         
         
         commentField.hidden = true
@@ -49,6 +49,18 @@ class AddActionViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    // remove keyboard upon tapping
+    func removeTextField(textField: UITextField) -> Bool {
+        
+        commentField.resignFirstResponder()
+        return true;
+    }
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        commentField.resignFirstResponder()
+            self.view.endEditing(true)
     }
     
     // func to set the activity key to email, lvm, or notes and then hide the other buttons

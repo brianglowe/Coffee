@@ -9,7 +9,7 @@
 import UIKit
 import Parse
 
-class UpdateStatusViewController: UIViewController {
+class UpdateStatusViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var winButton: UIButton!
     @IBOutlet weak var lostButton: UIButton!
@@ -29,6 +29,8 @@ class UpdateStatusViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        commentField.delegate = self
+        
         print("leadToUpdate at ViewDidLoad: \(leadToUpdate)")
         initiateView()
     }
@@ -36,6 +38,18 @@ class UpdateStatusViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    // remove keyboard upon tapping
+    func removeTextField(textField: UITextField) -> Bool {
+        
+        commentField.resignFirstResponder()
+        return true;
+    }
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        commentField.resignFirstResponder()
+        self.view.endEditing(true)
     }
     
     // MARK: present name of lead record & beginning view
