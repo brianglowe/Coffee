@@ -9,7 +9,7 @@
 import UIKit
 import Parse
 
-class EditLeadViewController: UIViewController {
+class EditLeadViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var leadNameLabel: UILabel!
     @IBOutlet weak var leadCompanyLabel: UILabel!
@@ -34,6 +34,10 @@ class EditLeadViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        leadPhoneField.delegate = self
+        leadEmailField.delegate = self
+        leadRatingField.delegate = self
+        
         saveLeadButton.hidden = true
         
         showLeadDetails()
@@ -42,6 +46,22 @@ class EditLeadViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    // remove keyboard upon tapping
+    func removeTextField(textField: UITextField) -> Bool {
+        
+        leadPhoneField.resignFirstResponder()
+        leadEmailField.resignFirstResponder()
+        leadRatingField.resignFirstResponder()
+        return true;
+    }
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        leadPhoneField.resignFirstResponder()
+        leadEmailField.resignFirstResponder()
+        leadRatingField.resignFirstResponder()
+        self.view.endEditing(true)
     }
     
     func showLeadDetails() {

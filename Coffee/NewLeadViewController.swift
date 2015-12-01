@@ -9,7 +9,7 @@
 import UIKit
 import Parse
 
-class NewLeadViewController: UIViewController {
+class NewLeadViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var leadNameField: UITextField!
     @IBOutlet weak var leadEmailField: UITextField!
@@ -29,6 +29,15 @@ class NewLeadViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Text field deleggates
+        leadNameField.delegate = self
+        leadEmailField.delegate = self
+        leadCompanyField.delegate = self
+        leadNumberField.delegate = self
+        leadRatingField.delegate = self
+        leadCommentsField.delegate = self
+        
+        
         // trying out swiftcop
         swiftCop.addSuspect(Suspect(view: self.leadNameField, sentence: "Full name please"){
             return $0.componentsSeparatedByString(" ").filter{$0 != ""}.count >= 2
@@ -42,6 +51,28 @@ class NewLeadViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    // remove keyboard upon tapping
+    func removeTextField(textField: UITextField) -> Bool {
+        leadNameField.resignFirstResponder()
+        leadEmailField.resignFirstResponder()
+        leadCompanyField.resignFirstResponder()
+        leadNumberField.resignFirstResponder()
+        leadRatingField.resignFirstResponder()
+        leadCommentsField.resignFirstResponder()
+        return true;
+    }
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        leadNameField.resignFirstResponder()
+        leadEmailField.resignFirstResponder()
+        leadCompanyField.resignFirstResponder()
+        leadNumberField.resignFirstResponder()
+        leadRatingField.resignFirstResponder()
+        leadCommentsField.resignFirstResponder()
+        self.view.endEditing(true)
+    }
+    
 
 // I think I will want to move this fucntion to LeadRecord.swift.  Possible conflicts between the NewLeadVC and the user movingn through Views concern me. Also, this may be a violation of MVC.
     func saveLead() {
